@@ -309,6 +309,10 @@ ul>li>a:hover,
 
 /*********** REFERENCES ************/
 
+.references-section {
+    height: 100%;
+}
+
 div>.form-container{
     padding: 0px 40px 0 40px;
 }

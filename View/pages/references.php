@@ -6,16 +6,17 @@
  * and open the template in the editor.
  */
         file_put_contents("log.txt", "view references before req".PHP_EOL, FILE_APPEND);
-        require_once 'Model/references-list.php';
-        $product = new References();
-        $product->setReferencesList();
-        $productList = $product->getReferencesList();
-        file_put_contents("log.txt", "view references after get list=".$productList[0][2].PHP_EOL, FILE_APPEND);
+        require_once 'Model/referencesModel.php';
+        $references = new ReferencesModel("","");
+        $references->setPaging(20);
+        $references->setReferencesList();
+        $referencesList = $references->getReferencesList();
+        file_put_contents("log.txt", "view references after get list=".$referencesList[0]["Name"].PHP_EOL, FILE_APPEND);
 ?>
 
         <div class="bg-content">
             <div class="container references-container">   
-                <div class="product-section">
+                <div class="references-section">
                     <div class="row button-div">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="col-lg-9 col-md-8 col-sm-9"></div>
@@ -25,14 +26,14 @@
                         </div>
                     </div>
                     
-                    <?php for($i = 0; $i <  sizeof($productList); $i++) { ?>
+                    <?php for($i = 0; $i <  sizeof($referencesList); $i++) { ?>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 references-page-img-container">
                         <div class="item-image">
-                            <img class="img-responsive img-container-inside" id="myImg<?php echo $productList[$i][0] ?>" src="uploads/<?php echo $productList[$i][3]; ?>">
+                            <img class="img-responsive img-container-inside" id="myImg<?php echo $referencesList[$i]["Id"] ?>" src="uploads/<?php echo $referencesList[$i]["ImgUrl"]; ?>">
                         </div>
                         <div class="row item-content">
                             <div class="item-text">
-                                <h4><?php echo $productList[$i][2]; ?></h4>
+                                <h4><?php echo $referencesList[$i]["Name"]; ?></h4>
                                 <h5>Caption Text2</h5>
                             </div>
                         </div>
