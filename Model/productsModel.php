@@ -26,6 +26,8 @@ class Products {
     public function __construct($category, $keyword) {   
         $this->category = $category;
         $this->keyword = $keyword;
+        file_put_contents("log.txt", "productModel -> category= ".$category.PHP_EOL, FILE_APPEND);
+        file_put_contents("log.txt", "productModel -> keyword= ".$keyword.PHP_EOL, FILE_APPEND);
     }
     
     private function countProducts() {
@@ -36,14 +38,17 @@ class Products {
         FROM
             products
         '
-        .(($this->keyword != "") ? "WHERE keywords='$this->keyword'" : "".(($this->category != "") ? "WHERE category='$this->category'" : "")));       
+        .(($this->keyword != "") ? "WHERE keywords LIKE '%".$this->keyword."%'" : "".(($this->category != "") ? "WHERE category='$this->category'" : "")));       
         $this->req1->execute();
         $this->total = $this->req1->fetch()[0];
     }
 
     public function setPaging() {
+        file_put_contents("log.txt", "set paging 1".PHP_EOL, FILE_APPEND);
         $this->countProducts();
-        $this->limit = 8;
+        file_put_contents("log.txt", "Total=".$this->total.PHP_EOL, FILE_APPEND);
+        file_put_contents("log.txt", "set paging 2".PHP_EOL, FILE_APPEND);
+        $this->limit = 16;
         // How many pages will there be
         $this->pages = ceil($this->total / $this->limit);
         // What page are we currently on?

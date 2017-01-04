@@ -7,7 +7,7 @@
  */
 
         if(isset($_GET['product_id'])) {
-            require_once 'View/pages/product-page.php';
+            require_once ('View/pages/product-page.php');
         }
         else {
             require_once ('View/pages/products.php');

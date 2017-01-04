@@ -7,7 +7,7 @@
             </div>
           </div>
           <div id="content" class="content-extra">
-            <div class="row-1">
+            <div class="row-1 showcase">
               <div class="container">
                   <div class="row">
                       <h3>VİTRİNDEKİ ÜRÜNLER</h3>

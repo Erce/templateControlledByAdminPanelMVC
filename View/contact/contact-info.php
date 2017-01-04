@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-offset-9">
-                                            <button type="submit" value="CHECK" class="btn btn-default submit">Send</button>
+                                            <button type="submit" value="CHECK" class="btn btn-default submit" style="float: right;">Gönder</button>
                                         </div>
                                     </div>
                                 </form>

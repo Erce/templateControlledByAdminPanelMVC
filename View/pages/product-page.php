@@ -5,40 +5,62 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-    require_once 'Model/products.php';
+    require_once 'Model/productsModel.php';
     $products = new Products("","");
     $productList = $products->getProduct($_GET['product_id']);
 ?>
     <div class="bg-content">
-        <div class="container-fluid product-section">
+        <div class="container product-section">
             <div class="row button-div">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="col-lg-9 col-md-8 col-sm-9">
-                        <?php echo $productList[0]["Title"]; ?>
+                        <h1 class="product-title"><?php echo $productList["Title"]; ?></h1>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-3 col-xs-12">                    
+                    <div class="col-lg-3 col-md-4 col-sm-3 col-xs-12">        
+                        <a href="?controller=pages&action=products"><button class="all-products-button">Diğer Ürünleri Göster</button></a>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row product-page-row">
                 <div class="col-lg-1 col-md-1"></div>
-                <div class="col-lg-5 col-md-7 col-sm-8 col-xs-12">
-                    <img class="img-responsive img-container-inside" id="myImg<?php echo $productList[0]["Id"] ?>" src="uploads/<?php echo $productList[0]["ImgUrl"]; ?>">
+                <div class="col-lg-5 col-md-7 col-sm-8 col-xs-12 product-image">
+                    <img class="img-responsive img-container-inside" id="myImg<?php echo $productList["Id"] ?>" src="uploads/<?php echo $productList["ImgUrl"]; ?>">
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-
+                <div class="col-lg-1 col-md-1"></div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-info">
+                    <form>
+                        <div class="form-group">
+                            <h3 class="product-text">Anahtar Kelimeler</h3>
+                            <?php $keywordsArray = split("; ", $productList["Keywords"]);
+                                for ($i = 0; $i < count($keywordsArray); $i++) {
+                                echo '<a class="keywords-button btn btn-default" href="?controller=pages&action=products&keyword='.$keywordsArray[$i].'">'.$keywordsArray[$i].'</a>';
+                            }?>
+                        </div>
+                        <div class="form-group">
+                            <input class="input-class form-control" value="<?php echo $productList["Name"]; ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <input class="input-class form-control" value="<?php echo $productList["ImgUrl"]; ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <input class="input-class form-control" value="<?php echo $productList["Description"]; ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <input class="input-class form-control" value="<?php echo $productList["Keywords"]; ?>" readonly>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-lg-2 col-md-2"></div>
+                <div class="col-lg-1 col-md-1"></div>
             </div>
         </div> 
-    </div>
-    <div id="myModal" class="modal">
-        <!-- The Close Button -->
-        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+        <div id="myModal" class="modal">
+            <!-- The Close Button -->
+            <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
 
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content" id="img01">
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
 
-        <!-- Modal Caption (Image Text) -->
-        <div id="caption"></div>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
     </div>
