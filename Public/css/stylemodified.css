@@ -282,6 +282,14 @@ ul>li>a:hover,
 
 .all-products-button {
     width: 100%;
+    background: transparent;
+    background-color: rgba(150,150,150,0.1);
+    border: 1px rgba(150,150,150,0.1) solid;
+    border-radius: 5px;
+    color: wheat;
+    font-weight: lighter;
+    font-family: aller;
+    font-size: 10pt;
 }
 
 .button-div {
@@ -355,6 +363,40 @@ ul>li>a:hover,
     background-color: #f1f1f1;
 }
 
+
+.product-img-container {
+    background-color: rgba(150,150,150,0.1);
+    border-radius: 5px;
+    border: 1px rgba(150,150,150,0.1) solid;
+    //margin: 10px;
+    padding: 2vh; 
+}
+
+.product-img-container:hover {
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0px 0px 20px 1px rgba(150,150,150,0.2);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0px 0px 20px 1px rgba(150,150,150,0.2);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0px 0px 20px 1px rgba(150,150,150,0.2);
+}
+
+.product-img-container-title,.product-img-container-name {
+    color: wheat;
+    opacity: 0.7;
+    font-weight: 100;
+    font-family: aller;
+    font-size: 10pt;
+}
+
+.product-img-container-title {
+    font-size: 12pt;
+}
+
+.product-img-container-title: hover,.product-img-container-name:hover {
+    text-decoration: underline;
+    -webkit-text-decoration-color: wheat;
+    -moz-text-decoration-color: wheat;  /* vendor prefix not required as of V36 */
+    text-decoration-color: wheat;
+}
+
 /*********** PRODUCTS *************/
 
 
@@ -382,7 +424,7 @@ div>.form-container{
 }
 
 .img-container-inside {
-
+    border-radius: 5px;
 }
 
 .item-image {

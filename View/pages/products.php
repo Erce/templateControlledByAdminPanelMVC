@@ -48,15 +48,17 @@
                         </div>
                 </div>
                 <?php for($i = 0; $i <  sizeof($productList); $i++) { ?>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 references-page-img-container">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 references-page-img-container">
                     <a href="?controller=pages&action=products&product_id=<?php echo $productList[$i]["Id"] ?>">
-                        <div class="item-image">
-                            <img class="img-responsive img-container-inside" id="myImg<?php echo $productList[$i]["Id"] ?>" src="uploads/<?php echo $productList[$i]["ImgUrl"]; ?>"/>
-                        </div>
-                        <div class="row item-content">
-                            <div class="item-text">
-                                <h4><?php echo $productList[$i]["Title"]; ?></h4>
-                                <h5><?php echo $productList[$i]["Name"]; ?></h5>
+                        <div class="product-img-container">
+                            <div class="item-image">
+                                <img class="img-responsive img-container-inside" id="myImg<?php echo $productList[$i]["Id"] ?>" src="uploads/<?php echo $productList[$i]["ImgUrl"]; ?>"/>
+                            </div>
+                            <div class="row item-content">
+                                <div class="item-text">
+                                    <h4 class="product-img-container-title"><?php if ($productList[$i]["Title"] != "") {echo $productList[$i]["Title"];} else {echo "Resim Başlığı";}  ?></h4>
+                                    <h5 class="product-img-container-name"><?php if ($productList[$i]["Name"] != "") {echo $productList[$i]["Name"];} else {echo "Resim Adı";} ?></h5>
+                                </div>
                             </div>
                         </div>
                     </a>
