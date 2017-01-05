@@ -30,23 +30,21 @@
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-info">
                     <form>
                         <div class="form-group">
-                            <h3 class="product-text">Anahtar Kelimeler</h3>
-                            <?php $keywordsArray = split("; ", $productList["Keywords"]);
+                            <h3 class="product-text"><?php echo $productList["Name"]; ?></h3>
+                        </div>
+                        <div class="form-group">
+                            <h5 class="product-text"><?php echo $productList["Description"]; ?></h5>
+                        </div>
+                        <div class="form-group">
+                            <h4 class="product-text">Anahtar Kelimeler</h4>
+                            <?php 
+                            $keywordsArray = str_replace(' ', '', $productList["Keywords"]);
+                            $keywordsArray = split(";", $keywordsArray);
                                 for ($i = 0; $i < count($keywordsArray); $i++) {
-                                echo '<a class="keywords-button btn btn-default" href="?controller=pages&action=products&keyword='.$keywordsArray[$i].'">'.$keywordsArray[$i].'</a>';
+                                    if ($keywordsArray[$i] != "") {
+                                        echo '<a class="keywords-button btn btn-default" href="?controller=pages&action=products&keyword='.$keywordsArray[$i].'">'.$keywordsArray[$i].'</a>';
+                                    }
                             }?>
-                        </div>
-                        <div class="form-group">
-                            <input class="input-class form-control" value="<?php echo $productList["Name"]; ?>" readonly>
-                        </div>
-                        <div class="form-group">
-                            <input class="input-class form-control" value="<?php echo $productList["ImgUrl"]; ?>" readonly>
-                        </div>
-                        <div class="form-group">
-                            <input class="input-class form-control" value="<?php echo $productList["Description"]; ?>" readonly>
-                        </div>
-                        <div class="form-group">
-                            <input class="input-class form-control" value="<?php echo $productList["Keywords"]; ?>" readonly>
                         </div>
                     </form>
                 </div>

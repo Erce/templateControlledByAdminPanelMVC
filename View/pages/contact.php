@@ -1,8 +1,9 @@
           
         <!--<div class="spinner"></div>-->  
         <div class="bg-content">
-          <div class="container contact-container">          
-              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+          <div class="container contact-container">     
+              <div class="col-lg-1"></div>
+              <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12">
                   <?php require_once 'View/contact/contact-info.php'; ?>
               </div>
               <div class="col-lg-1 col-md-1 col-sm-1"></div>

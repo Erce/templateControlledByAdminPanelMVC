@@ -51,6 +51,10 @@ body {
     font-family: aller;
 }
 
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
 //@import url("Public/css/dynamicStyle.php");
 
 .bg-content>.container-fluid {
@@ -325,7 +329,7 @@ ul>li>a:hover,
 }
 
 .product-info {
-    margin-top: 5%;
+    //margin-top: 5%;
 }
 
 .product-title {
@@ -397,6 +401,13 @@ ul>li>a:hover,
     text-decoration-color: wheat;
 }
 
+.products-container {
+    padding: 0;
+}
+
+.container-fluid .container {
+    padding: 0;
+}
 /*********** PRODUCTS *************/
 
 
@@ -445,6 +456,7 @@ div>.form-container{
 
 .item-content {
     padding: 15px;
+    padding-bottom: 0;
 }
 
 .item-text {
@@ -777,13 +789,22 @@ div>.form-container{
 /************** FOOTER ****************/
 
 /*------ footer ------- */
+.footer .row {
+    height: 100%;
+}
+
+
 .footer {
     margin-top: 12%;
-    height: 80px;
+    min-height: 140px;
     background-color: rgba(50,50,50,0.97);
     -webkit-box-shadow: inset 0px 40px 10px 10px rgba(255,255,255,0.30);
     -moz-box-shadow: inset 0px 40px 10px 10px rgba(255,255,255,0.30);
     box-shadow: inset 0px 40px 40px 10px rgba(100,100,100,0.30);
+}
+
+.footer-info {
+    margin-top: 20px;
 }
 
 .text-muted {
@@ -793,7 +814,7 @@ div>.form-container{
   color: #1a1a1a;
   padding-top: 6px;
 }
-.privacy a {
+.privacy div {
   color: #e85356;
 }
 .list-social {
@@ -801,7 +822,8 @@ div>.form-container{
   overflow: hidden;
   margin: 0;
 }
-.list-social a {
+
+.list-social div {
   width: 30px;
   height: 30px;
   -webkit-transition: all 0.2s linear;
@@ -811,28 +833,42 @@ div>.form-container{
   background-position: 0 0;
   background-repeat: no-repeat;
 }
-.list-social a.icon-1 {
-  background-image: url(Public/img/soc-icon-1.png);
+.list-social div.icon-1 {
+  background-image: url(../img/soc-icon-1.png);
 }
-.list-social a.icon-2 {
-  background-image: url(Public/img/soc-icon-2.png);
+.list-social div.icon-2 {
+  background-image: url(../img/soc-icon-2.png);
 }
-.list-social a.icon-3 {
-  background-image: url(Public/img/soc-icon-3.png);
+.list-social div.icon-3 {
+  background-image: url(../img/soc-icon-3.png);
 }
-.list-social a.icon-4 {
-  background-image: url(Public/img/soc-icon-4.png);
+.list-social div.icon-4 {
+  background-image: url(../img/soc-icon-4.png);
 }
-.list-social a.icon-5 {
-  background-image: url(Public/img/soc-icon-5.png);
+.list-social div.icon-5 {
+  background-image: url(../img/soc-icon-5.png);
 }
 .list-social li {
-  float: left;
-  margin-left: 5px;
+    float: left;
+    margin-left: 5px;
+    height: 30px;
+    width: 30px;
 }
-.list-social a:hover {
+
+.list-social {
+    margin-top: 20px;
+}
+
+.list-social div:hover {
   background-position: 0 bottom;
 }
 /*--- footer end ------*/
 
 /************** FOOTER ****************/
+
+.vertical-align {
+    display:flex;
+    //justify-content:center;
+    align-items: center;
+    //flex-flow: column;
+}

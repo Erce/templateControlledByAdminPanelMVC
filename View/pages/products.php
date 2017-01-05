@@ -12,7 +12,7 @@
         $category = isset($_GET['category']) ? $_GET['category'] : "";
         $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
         $product = new Products($category,$keyword);
-        $product->setPaging();
+        $product->setPaging(16);
         $product->setProductList();
         $productList = $product->getProductList();
         $link = (($keyword != "") ? '&keywords='.$keyword : ("".(($category != "") ? '&category='.$category : "")));

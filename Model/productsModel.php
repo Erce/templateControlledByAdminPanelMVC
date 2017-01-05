@@ -43,12 +43,12 @@ class Products {
         $this->total = $this->req1->fetch()[0];
     }
 
-    public function setPaging() {
+    public function setPaging($limit) {
         file_put_contents("log.txt", "set paging 1".PHP_EOL, FILE_APPEND);
         $this->countProducts();
         file_put_contents("log.txt", "Total=".$this->total.PHP_EOL, FILE_APPEND);
         file_put_contents("log.txt", "set paging 2".PHP_EOL, FILE_APPEND);
-        $this->limit = 16;
+        $this->limit = $limit;
         // How many pages will there be
         $this->pages = ceil($this->total / $this->limit);
         // What page are we currently on?
