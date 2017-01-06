@@ -21,7 +21,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="col-lg-9 col-md-8 col-sm-9"></div>
                             <div class="col-lg-3 col-md-4 col-sm-3 col-xs-12">
-                                <button class="all-products-button">Diğer Ürünleri Göster</button>
+                                <!--<button class="all-products-button">Diğer Ürünleri Göster</button>-->
                             </div>
                         </div>
                     </div>
