@@ -15,7 +15,7 @@ class SliderPhoto extends PhotoModel {
     
     public function setSliderPhotoList() {
         $db = Db::getInstance();
-        $query = sprintf("SELECT * FROM sliderphotos");
+        $query = sprintf("SELECT * FROM sliderphotos ORDER BY date");
         $req = $db->prepare($query);
         $req->execute();
 

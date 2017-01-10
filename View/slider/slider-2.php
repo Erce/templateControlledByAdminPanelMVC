@@ -1,4 +1,13 @@
-            
+
+ 
+<?php 
+ 
+        require_once 'Model/sliderPhotoModel.php';
+        $slider = new SliderPhoto();
+        $slider->setSliderPhotoList();
+        $sliderPhotoList = $slider->getSliderPhotoList();
+ 
+ ?>
 
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -6,44 +15,32 @@
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
                     <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example" data-slide-to="1"></li>
-                    <li data-target="#carousel-example" data-slide-to="2"></li>
-                    <li data-target="#carousel-example" data-slide-to="3"></li>
-                    <li data-target="#carousel-example" data-slide-to="4"></li>
-                  </ol>
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner">
-                    <div class="item active">
-                      <img src="img/slide-1.jpg" alt="...">
-                      <div class="carousel-caption">
-                        <h3></h3>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <img src="img/slide-2.jpg" alt="...">
-                      <div class="carousel-caption">
-                        <h3></h3>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <img src="img/slide-3.jpg" alt="...">
-                      <div class="carousel-caption">
-                        <h3></h3>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <img src="img/slide-4.jpg" alt="...">
-                      <div class="carousel-caption">
-                        <h3></h3>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <img src="img/slide-5.jpg" alt="...">
-                      <div class="carousel-caption">
-                        <h3></h3>
-                      </div>
-                    </div>
-                  </div>
+                    <?php 
+                        for ($i = 1; $i < count($sliderPhotoList); $i++) { ?>
+                            <li data-target="#carousel-example" data-slide-to="<?php echo $i; ?>"></li>   
+                    <?php
+                        }
+                    ?>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="uploads/<?php echo $sliderPhotoList[0]["Name"]; ?>" alt="...">
+                            <div class="carousel-caption">
+                                <h3></h3>
+                            </div>
+                        </div>
+                    <?php 
+                        for ($i = 1; $i < count($sliderPhotoList); $i++) { ?>
+                            <div class="item">
+                            <img src="uploads/<?php echo $sliderPhotoList[$i]["Name"]; ?>" alt="...">
+                            <div class="carousel-caption">
+                                <h3></h3>
+                            </div>
+                        </div> 
+                    <?php
+                        }
+                    ?>
                   <!-- Controls -->
                   <a class="left carousel-control" href="#carousel-example" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>

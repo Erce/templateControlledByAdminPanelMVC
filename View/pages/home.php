@@ -6,7 +6,7 @@
                 <?php require 'View/slider/'.$pageList[0]["Slider"].'.php'; ?>
             </div>
           </div>
-          <div id="content" class="content-extra">
+          <div id="content" class="row content-extra">
             <div class="row-1 showcase">
               <div class="container">
                   <div class="row">
@@ -27,7 +27,7 @@
                                     <div class="item-image">
                                         <img class="img-responsive" src="Public/img/slide-3.jpg" alt="...">
                                     </div>
-                                    <div class="row item-content">
+                                    <div class="row item-content showcase-item-content">
                                       <h4>Caption Text</h4>
                                       <h5>Caption Text2</h5>
                                     </div>
@@ -38,7 +38,7 @@
                                     <div class="item-image">
                                         <img class="img-responsive" src="Public/img/slide-3.jpg" alt="...">
                                     </div>
-                                    <div class="row item-content">
+                                    <div class="row item-content showcase-item-content">
                                       <h4>Caption Text</h4>
                                       <h5>Caption Text2</h5>
                                     </div>
@@ -49,7 +49,7 @@
                                     <div class="item-image">
                                         <img class="img-responsive" src="Public/img/slide-3.jpg" alt="...">
                                     </div>
-                                    <div class="row item-content">
+                                    <div class="row item-content showcase-item-content">
                                       <h4>Caption Text</h4>
                                       <h5>Caption Text2</h5>
                                     </div>
@@ -60,7 +60,7 @@
                                     <div class="item-image">
                                         <img class="img-responsive" src="Public/img/slide-3.jpg" alt="...">
                                     </div>
-                                    <div class="row item-content">
+                                    <div class="row item-content showcase-item-content">
                                       <h4>Caption Text</h4>
                                       <h5>Caption Text2</h5>
                                     </div>
@@ -73,7 +73,7 @@
                                     <div class="item-image">
                                         <img class="img-responsive" src="Public/img/slide-3.jpg" alt="...">
                                     </div>
-                                    <div class="row item-content">
+                                    <div class="row item-content showcase-item-content">
                                       <h4>Caption Text</h4>
                                       <h5>Caption Text2</h5>
                                     </div>
@@ -84,7 +84,7 @@
                                     <div class="item-image">
                                         <img class="img-responsive" src="Public/img/slide-3.jpg" alt="...">
                                     </div>
-                                    <div class="row item-content">
+                                    <div class="row item-content showcase-item-content">
                                       <h4>Caption Text</h4>
                                       <h5>Caption Text2</h5>
                                     </div>
@@ -95,7 +95,7 @@
                                     <div class="item-image">
                                         <img class="img-responsive" src="Public/img/slide-3.jpg" alt="...">
                                     </div>
-                                    <div class="row item-content">
+                                    <div class="row item-content showcase-item-content">
                                       <h4>Caption Text</h4>
                                       <h5>Caption Text2</h5>
                                     </div>
@@ -106,7 +106,7 @@
                                     <div class="item-image">
                                         <img class="img-responsive" src="Public/img/slide-3.jpg" alt="...">
                                     </div>
-                                    <div class="row item-content">
+                                    <div class="row item-content showcase-item-content">
                                       <h4>Caption Text</h4>
                                       <h5>Caption Text2</h5>
                                     </div>
@@ -119,7 +119,7 @@
                                     <div class="item-image">
                                         <img class="img-responsive" src="Public/img/slide-3.jpg" alt="...">
                                     </div>
-                                    <div class="row item-content">
+                                    <div class="row item-content showcase-item-content">
                                       <h4>Caption Text</h4>
                                       <h5>Caption Text2</h5>
                                     </div>
@@ -130,7 +130,7 @@
                                     <div class="item-image">
                                         <img class="img-responsive" src="Public/img/slide-3.jpg" alt="...">
                                     </div>
-                                    <div class="row item-content">
+                                    <div class="row item-content showcase-item-content">
                                       <h4>Caption Text</h4>
                                       <h5>Caption Text2</h5>
                                     </div>
@@ -141,7 +141,7 @@
                                     <div class="item-image">
                                         <img class="img-responsive" src="Public/img/slide-3.jpg" alt="...">
                                     </div>
-                                    <div class="row item-content">
+                                    <div class="row item-content showcase-item-content">
                                       <h4>Caption Text</h4>
                                       <h5>Caption Text2</h5>
                                     </div>
@@ -152,7 +152,7 @@
                                     <div class="item-image">
                                         <img class="img-responsive" src="Public/img/slide-3.jpg" alt="...">
                                     </div>
-                                    <div class="row item-content">
+                                    <div class="row item-content showcase-item-content">
                                       <h4>Caption Text</h4>
                                       <h5>Caption Text2</h5>
                                     </div>
@@ -163,10 +163,8 @@
                   </div>
               </div>
             </div>
-            <div class="container">
-              <div class="row1">
-                  <?php require 'View/products.php'; ?>
-              </div>
+            <div class="row1">
+                <?php require_once 'View/products.php'; ?>
             </div>
           </div>
         </div>
