@@ -12,10 +12,9 @@
         <div class="bg-content">
           <div id="content" class="content-extra">
               <div class="container">
-                  <div class="row">
-                      <h2>SAYFA BULUNAMADI.</h2>
+                  <div class="row text-center">
+                      <h2>SAYFA BULUNAMADI</h2>
                   </div>       
               </div>
-              <h2>SAYFA BULUNAMADI.</h2>
           </div>
         </div>

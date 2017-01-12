@@ -76,7 +76,7 @@ body {
 
 .bg-content {
     margin-top: 82px;
-    min-height: calc(100vh);
+    min-height: calc(40vh);
     //background: url(../img/bg-content.jpg) 50% 50%;
 }
 
@@ -264,9 +264,9 @@ ul>li>a:hover,
     right: 0;
     margin: -3px 15px 0 0;
     padding: 0;
-    width: 32px;
-    height: 26px;
-    line-height: 24px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
     text-align: center;
     border-width: 1px;
     border-style: solid;
@@ -638,7 +638,7 @@ div>.form-container{
     margin-top: 100px;
     padding-top: 80px;
     font-family: aller;
-    min-height: calc(100vh - 110px);
+    min-height: calc(100vh - 200px);
 }
 
 .about-inside-div {
@@ -678,8 +678,10 @@ div>.form-container{
     margin-top: 40px;
 }
 
+.slider-padding {}
+
 #carousel-example {
-    margin-top: 50px;
+    //margin-top: 50px;
 }
 
 #content {
@@ -758,6 +760,10 @@ div>.form-container{
 
 #carousel-example>.carousel-control.right  {
     right: 0px;
+}
+
+.slider-3 {
+    margin-top: -122px;
 }
 
 /*#carousel-example-generic>a>.glyphicon-chevron-left {

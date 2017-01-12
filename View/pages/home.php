@@ -1,7 +1,7 @@
-          
+
         <!--<div class="spinner"></div>-->  
         <div class="bg-content">
-          <div class="container-fluid">
+          <div class="container-fluid slider-padding">
             <div class="row row-slider">
                 <?php require 'View/slider/'.$pageList[0]["Slider"].'.php'; ?>
             </div>

@@ -8,6 +8,10 @@
     require_once 'Model/productsModel.php';
     $products = new Products("","");
     $productList = $products->getProduct($_GET['product_id']);
+    
+    require_once 'Model/photoModel.php';
+    $photos = new PhotoModel();
+    $photoList = $photos->getPhotoList($_GET['product_id']);
 ?>
     <div class="bg-content">
         <div class="container product-section">
@@ -25,6 +29,15 @@
                 <div class="col-lg-1 col-md-1"></div>
                 <div class="col-lg-5 col-md-7 col-sm-8 col-xs-12 product-image">
                     <img class="img-responsive img-container-inside" id="myImg<?php echo $productList["Id"] ?>" src="uploads/<?php echo $productList["ImgUrl"]; ?>">
+                    <div class="row">
+                        <?php for ($i = 0; $i < count($photoList); $i++) { ?>
+                        <div class="photo-img-container" style="float: left; height: 25%; width: 25%;">
+                            <div class="item-image">
+                                <img class="img-responsive img-container-inside" id="myImgPhoto<?php echo $photoList[$i]["Id"] ?>" src="uploads/<?php echo $photoList[$i]["ImgUrl"]; ?>">
+                            </div>
+                        </div>
+                        <?php }?>
+                    </div>
                 </div>
                 <div class="col-lg-1 col-md-1"></div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-info">

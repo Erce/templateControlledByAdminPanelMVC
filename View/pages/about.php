@@ -1,7 +1,7 @@
         
         
         <!--<div class="spinner"></div>-->  
-        <div class="bg-content">
+        <div class="bg-content" style="min-height: 500px;">
             <div class="container-fluid about-container">
                 <div class="col-lg-3 col-sm-1 col-md-1"></div>
                 <div class="col-lg-6 col-sm-10 col-md-10 col-xs-12 vcenter">

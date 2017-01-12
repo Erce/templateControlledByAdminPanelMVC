@@ -20,9 +20,11 @@
         echo $exc->getTraceAsString();
     }
 
-?>
 
+?>
+    
     <div class="bg-content">
+        <?php if (isset($productList[0])) : ?>
         <div class="container products-container">   
             <div class="product-section">
                 <div class="row button-div">
@@ -66,4 +68,9 @@
                 <?php } ?>         
             </div> 
         </div>
+        <?php
+        else :
+            require_once('View/pages/error.php');
+        
+        endif; ?>
     </div>
