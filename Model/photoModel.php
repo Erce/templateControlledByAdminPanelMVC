@@ -128,23 +128,27 @@
         }
         
         public function getPhotoList($productId) {
-            $db = Db::getInstance();
-            $query = sprintf("SELECT * FROM photos WHERE product_id='%s'", $productId);
-            $req = $db->prepare($query);
-            $req->execute();
+            try {
+                $db = Db::getInstance();
+                $query = sprintf("SELECT * FROM photos WHERE product_id='%s'", $productId);
+                $req = $db->prepare($query);
+                $req->execute();
 
-            while($row = $req->fetch()) {
-                if(isset($row['id'])) { $this->id = $row['id'];}
-                if(isset($row['name'])) { $this->name = $row['name'];}
-                if(isset($row['imgurl'])) { $this->imgurl = $row['imgurl'];}
-                if(isset($row['product_id'])) { $this->productId = $row['product_id'];}
-                $this->photoRow = array( "Id" => $this->id,
-                                         "Name" => $this->name,
-                                         "ImgUrl" => $this->imgurl,
-                                         "ProductId" => $this->productId);
-                array_push($this->photoList, $this->photoRow);
+                while($row = $req->fetch()) {
+                    if(isset($row['id'])) { $this->id = $row['id'];}
+                    if(isset($row['name'])) { $this->name = $row['name'];}
+                    if(isset($row['imgurl'])) { $this->imgurl = $row['imgurl'];}
+                    if(isset($row['product_id'])) { $this->productId = $row['product_id'];}
+                    $this->photoRow = array( "Id" => $this->id,
+                                             "Name" => $this->name,
+                                             "ImgUrl" => $this->imgurl,
+                                             "ProductId" => $this->productId);
+                    array_push($this->photoList, $this->photoRow);
+                }
+
+                return $this->photoList;
+            } catch (Exception $exc) {
+                file_put_contents("log.txt", "photoModel -> get photo list".PHP_EOL, FILE_APPEND);
             }
-            
-            return $this->photoList;
         }
     }

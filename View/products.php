@@ -20,7 +20,7 @@ $productList = $products->getProductList();
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-lg-9 col-md-8 col-sm-9"></div>
                 <div class="col-lg-3 col-md-4 col-sm-3 col-xs-12">
-                    <a href="?controller=pages&action=products"><button class="all-products-button">Diğer Ürünleri Göster</button></a>
+                    <a class="keywords-button btn btn-default" href="?controller=pages&action=products">Diğer Ürünleri Göster</a>
                 </div>
             </div>
         </div>

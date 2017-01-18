@@ -76,7 +76,7 @@ body {
 
 .bg-content {
     margin-top: 82px;
-    min-height: calc(40vh);
+    min-height: calc(60vh);
     //background: url(../img/bg-content.jpg) 50% 50%;
 }
 
@@ -188,10 +188,10 @@ nav,
     padding-top: 10px;
     padding-bottom: 10px;
     background: rgba(255,255,255,0.9);
-    border: 0;
-    -webkit-box-shadow: 0px 8px 60px 0px rgba(231,166,26,0.3);
+    border-bottom: 1px solid rgb(150,150,150);
+    /*-webkit-box-shadow: 0px 8px 60px 0px rgba(231,166,26,0.3);
     -moz-box-shadow: 0px 8px 60px 0px rgba(231,166,26,0.3);
-    box-shadow: 0px 8px 60px 0px rgba(231,166,26,0.3);
+    box-shadow: 0px 8px 60px 0px rgba(231,166,26,0.3);*/
 }
 
 .navbar-nav {
@@ -298,8 +298,8 @@ ul>li>a:hover,
 
 .button-div {
     margin-top: 20px;
-    margin-bottom:30px;
-    padding-bottom: 5px;
+    margin-bottom:8%;
+    padding-bottom: 0px;
     border-bottom: 1px dashed rgba(150,150,150,0.3);
 }
 
@@ -357,14 +357,16 @@ ul>li>a:hover,
 }
 
 .product-title {
-    color: wheat;
+    color: rgb(20,20,20);
+    font-family: sans-serif;
     opacity: 0.7;
     margin: 0;
 }
 
 .product-text {
     //border-bottom: 1px outset wheat;
-    color: wheat;
+    color: rgb(20,20,20);
+    font-family: sans-serif;
     opacity: 0.7;
     margin: 0;
     margin-bottom: 10px;
@@ -391,6 +393,12 @@ ul>li>a:hover,
     background-color: #f1f1f1;
 }
 
+.photo-img-container {
+    margin: 2px;
+    padding-left: 1px;
+    padding-right: 1px;
+    border: 1px solid rgba(190,190,190, 0.4);
+}
 
 .product-img-container {
     background-color: rgba(240,240,240,1);
@@ -433,6 +441,45 @@ ul>li>a:hover,
 .container-fluid .container {
     padding: 0;
 }
+
+.product-image {
+    margin: 0 auto;
+}    
+
+.other-products {
+    
+}
+
+.other-products-text {
+    margin: 0;
+    color: rgb(20,20,20);
+    font-family: sans-serif;
+    opacity: 0.7;
+}
+
+.other-products-text-title {
+    margin: 0;
+    margin-top: 10px;
+    color: rgb(20,20,20);
+    font-family: sans-serif;
+    opacity: 0.7;
+}
+
+.other-products-text-name {
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(20,20,20);
+    font-family: sans-serif;
+    opacity: 0.7;
+}
+
+.other-products-container {
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px dashed rgba(50,50,50,0.1);
+    min-height: 70px;
+}
 /*********** PRODUCTS *************/
 
 
@@ -447,9 +494,9 @@ div>.form-container{
 }
 
 .bg-content>.references-container {
-    margin-top: 120px; 
+    //margin-top: 120px; 
     margin-bottom: 0px; 
-    padding-top: 5%; 
+    padding-top: 2%; 
     padding-bottom: 70px; 
     min-height: calc(100vh - 200px);
     height: 100%;
@@ -642,7 +689,7 @@ div>.form-container{
 }
 
 .about-inside-div {
-    color: wheat;
+    color: rgb(20,20,20);
     border-radius: 2px;
     //height: 200px;
 }
@@ -653,9 +700,9 @@ div>.form-container{
 }
 
 .about-title {
-    color: wheat;
+    color: rgb(20,20,20);
     opacity: 0.7;
-    border-bottom: 1px outset wheat;
+    border-bottom: 0.1px outset rgb(20,20,20);
 }
 
 .about-logo {
@@ -824,18 +871,43 @@ div>.form-container{
     height: 100%;
 }
 
+.footer-row {
+    margin-top: 0%;
+}
 
-.footer {
-    margin-top: 12%;
-    min-height: 140px;
-    background-color: rgba(50,50,50,0.97);
-    -webkit-box-shadow: inset 0px 40px 10px 10px rgba(255,255,255,0.30);
-    -moz-box-shadow: inset 0px 40px 10px 10px rgba(255,255,255,0.30);
-    box-shadow: inset 0px 40px 40px 10px rgba(100,100,100,0.30);
+.footer-logo {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
 }
 
 .footer-info {
-    margin-top: 20px;
+    margin-left: 2%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.footer-text {
+    color: rgb(200,200,200);
+    font-family: sans-serif;
+    font-size: 12pt;
+}
+
+.footer-social {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.footer-logo .img-responsive {
+    margin: 0 auto;
+}
+
+.footer {
+    margin-top: 12%;
+    min-height: 100px;
+    background-color: rgba(5,5,5,1);
+    -webkit-box-shadow: inset 0px 40px 10px 10px rgba(255,255,255,0.30);
+    -moz-box-shadow: inset 0px 40px 10px 10px rgba(255,255,255,0.30);
+    box-shadow: inset 0px 10px 40px 5px rgba(150,150,150,0.30);
 }
 
 .text-muted {
@@ -888,6 +960,12 @@ div>.form-container{
 
 .list-social {
     margin-top: 10%;
+}
+
+@media (max-width: 800px) {
+    .list-social {
+        margin-top: 0%;
+    }
 }
 
 .list-social div:hover {

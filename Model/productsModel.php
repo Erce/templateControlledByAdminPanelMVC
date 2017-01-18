@@ -232,7 +232,7 @@ class Products {
                 unlink($file);
             }   
         } catch (Exception $exc) {
-            echo $exc->getTraceAsString();
+            file_put_contents("log.txt", "productsModel => delete()".PHP_EOL, FILE_APPEND);
         }
     }
     
@@ -255,8 +255,47 @@ class Products {
                 echo "Sorry, there was a problem uploading your file.";
             }    
         } catch (Exception $exc) {
-            echo $exc->getTraceAsString();
+            file_put_contents("log.txt", "productsModel => add()".PHP_EOL, FILE_APPEND);
         }
     }
     
+    public function randomProductList($number) {
+        try {
+            $db = Db::getInstance();
+            $query = "SELECT * FROM products
+                        ORDER BY RAND()
+                        LIMIT $number";
+            $req = $db->prepare($query);
+            $req->execute();  
+            $productList = array();
+            while($row = $req->fetch()) {
+                file_put_contents("log.txt", "productsModel => randomProductList() ID====>".$row['id'].PHP_EOL, FILE_APPEND);
+                if(isset($row['id'])) { $this->productId = $row['id'];}
+                if(isset($row['title'])) { $this->productTitle = $row['title'];}
+                if(isset($row['name'])) { $this->productName = $row['name'];}
+                if(isset($row['imgurl'])) { $this->productImgUrl = $row['imgurl'];}
+                if(isset($row['keywords'])) { $this->productKeywords = $row['keywords'];}
+                if(isset($row['description'])) { $this->productDescription = $row['description'];}
+                if(isset($row['category'])) { $this->productCategory = $row['category'];}
+                $productRow = array("Id" => $this->productId,
+                                    "Title" => $this->productTitle,
+                                    "Name" => $this->productName, 
+                                    "ImgUrl" => $this->productImgUrl,
+                                    "Keywords" => $this->productKeywords,
+                                    "Description" => $this->productDescription, 
+                                    "Category" => $this->productCategory);
+                array_push($productList, $productRow);
+            }   
+            return $productList;
+        } catch (Exception $exc) {
+            file_put_contents("log.txt", "productsModel => randomProductList()".PHP_EOL, FILE_APPEND);
+        }
+    }
+    
+    public function preg_trim($string) {
+        $string = str_replace(' ; ', ';', $string);
+        $string = str_replace(' ;', ';', $string);
+        $string = str_replace('; ', ';', $string);
+        return $string;
+    }
 }

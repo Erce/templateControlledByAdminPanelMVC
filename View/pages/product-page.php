@@ -12,26 +12,27 @@
     require_once 'Model/photoModel.php';
     $photos = new PhotoModel();
     $photoList = $photos->getPhotoList($_GET['product_id']);
+    
+    
 ?>
     <div class="bg-content">
         <div class="container product-section">
             <div class="row button-div">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="col-lg-9 col-md-8 col-sm-9">
+                    <div class="col-lg-9 col-md-8 col-sm-9 col-xs-6">
                         <h1 class="product-title"><?php echo $productList["Title"]; ?></h1>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-3 col-xs-12">        
-                        <a href="?controller=pages&action=products"><button class="all-products-button">Diğer Ürünleri Göster</button></a>
+                    <div class="col-lg-3 col-md-4 col-sm-3 col-xs-6">        
+                        <a class="keywords-button btn btn-default" href="?controller=pages&action=products">Diğer Ürünleri Göster</a>
                     </div>
                 </div>
             </div>
             <div class="row product-page-row">
-                <div class="col-lg-1 col-md-1"></div>
-                <div class="col-lg-5 col-md-7 col-sm-8 col-xs-12 product-image">
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 product-image text-center">
                     <img class="img-responsive img-container-inside" id="myImg<?php echo $productList["Id"] ?>" src="uploads/<?php echo $productList["ImgUrl"]; ?>">
-                    <div class="row">
+                    <div class="text-center">
                         <?php for ($i = 0; $i < count($photoList); $i++) { ?>
-                        <div class="photo-img-container" style="float: left; height: 25%; width: 25%;">
+                        <div class="photo-img-container" style="float: left; height: 25%; width: 24%;">
                             <div class="item-image">
                                 <img class="img-responsive img-container-inside" id="myImgPhoto<?php echo $photoList[$i]["Id"] ?>" src="uploads/<?php echo $photoList[$i]["ImgUrl"]; ?>">
                             </div>
@@ -39,7 +40,6 @@
                         <?php }?>
                     </div>
                 </div>
-                <div class="col-lg-1 col-md-1"></div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-info">
                     <form>
                         <div class="form-group">
@@ -51,17 +51,37 @@
                         <div class="form-group">
                             <h4 class="product-text">Anahtar Kelimeler</h4>
                             <?php 
-                            $keywordsArray = str_replace(' ', '', $productList["Keywords"]);
+                            $keywordsArray = preg_replace('/\s+/', '', $productList["Keywords"]);
                             $keywordsArray = split(";", $keywordsArray);
-                                for ($i = 0; $i < count($keywordsArray); $i++) {
-                                    if ($keywordsArray[$i] != "") {
-                                        echo '<a class="keywords-button btn btn-default" href="?controller=pages&action=products&keyword='.$keywordsArray[$i].'">'.$keywordsArray[$i].'</a>';
-                                    }
+                            
+                            for ($i = 0; $i < count($keywordsArray); $i++) {
+                                if ($keywordsArray[$i] != "") {
+                                    $keywordShow = str_replace('-', ' ', $keywordsArray[$i]);
+                                    echo '<a class="keywords-button btn btn-default" href="?controller=pages&action=products&keyword='.$keywordsArray[$i].'">'.$keywordShow.'</a>';
+                                }
                             }?>
                         </div>
                     </form>
                 </div>
-                <div class="col-lg-1 col-md-1"></div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <h3 class="other-products-text">Diğer Ürünlerimiz</h3>
+                    <div class="other-products">
+                        <?php $randomProductList = $products->randomProductList(8); ?>
+                        <?php for ($i = 0; $i < 8; $i++) { ?>
+                                <a href="?controller=pages&action=products&product_id=<?php echo $randomProductList[$i]["Id"] ?>">
+                                    <div class="other-products-container vcenter">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <img class="img-thumbnail" src="uploads/<?php echo $randomProductList[$i]["ImgUrl"]; ?>" height="60px" width="100%">
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                            <h4 class="other-products-text-title"><?php echo $randomProductList[$i]["Title"]; ?></h4>
+                                            <h5 class="other-products-text-name"><?php echo $randomProductList[$i]["Name"]; ?></h5>
+                                        </div>
+                                    </div>
+                                </a>
+                        <?php } ?>
+                    </div>
+                </div>
             </div>
         </div> 
         <div id="myModal" class="modal">

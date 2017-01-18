@@ -7,8 +7,16 @@
     ?>
     <footer class="footer">
         <div class="container" style="height: 100%;">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pull-right">
+            <div class="footer-row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-logo">
+                    <img class="img-responsive" src="uploads/<?php echo $logoNavbar; ?>">
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12 text-center footer-info">
+                    <p class='footer-text'>
+                        <?php echo $footerDescription; ?>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 footer-social">
                     <ul class="list-social pull-right">
                         <li><a id="facebook" href="<?php for ($index = 0; $index < count($socialLinksList); $index++) {
                                                                 if($socialLinksList[$index]["Name"] == "Facebook"){echo "http://".$socialLinksList[$index]["Url"];}
@@ -22,11 +30,6 @@
                                                         } ?>"><div class="icon-4"></div></a></li>
                         <li><a id="contact" href="?controller=pages&action=contact"><div class="icon-5"></div></a></li>
                     </ul>
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 footer-info">
-                    <a href="http://www.ercecanbalcioglu.com/">ercecanbalcioglu.com</a>
-                    <p>ercecanbalcioglu.comercecanbalcioglu.come</p>
-                    <p>.comercecanbalcioglu.comercecanbalcioglu.</p>
                 </div>
             </div>
         </div>

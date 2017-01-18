@@ -28,6 +28,7 @@ class SiteSettingsModel {
                                               "FontFamily" => $row['font_family'],
                                               "FooterColor" => $row['footer_color'],
                                               "FooterOpacity" => $row['footer_opacity'],
+                                              "FooterDescription" => $row['footer_description'],
                                               "LogoNavbar" => $row['logo_navbar'],
                                               "LogoFavicon" => $row['logo_favicon'],
                                               "IsOn" => $row['is_on']); 
@@ -60,6 +61,7 @@ class SiteSettingsModel {
                                             "FontFamily" => $row['font_family'],
                                             "FooterColor" => $row['footer_color'],
                                             "FooterOpacity" => $row['footer_opacity'],
+                                            "FooterDescription" => $row['footer_description'],
                                             "LogoNavbar" => $row['logo_navbar'],
                                             "LogoFavicon" => $row['logo_favicon'],
                                             "IsOn" => $row['is_on']); 

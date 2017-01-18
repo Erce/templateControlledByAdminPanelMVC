@@ -35,7 +35,7 @@
                                     $prevlink = ($product->page > 1) ? '<a href="?page=1" title="First page">&laquo;</a> <a href="?controller=pages&action=products'.$link.'&page=' . ($product->page - 1) . '" title="Previous page">&lsaquo;</a>' : '<span class="disabled">&laquo;</span> <span class="disabled">&lsaquo;</span>';
 
                                     // The "forward" link
-                                    $nextlink = ($product->page < $product->pages) ? '<a href="?controller=pages&action=products'.$link.'&page=' . ($product->page + 1) . '" title="Next page">&rsaquo;</a> <a href="?page=' . $product->pages . '" title="Last page">&raquo;</a>' : '<span class="disabled">&rsaquo;</span> <span class="disabled">&raquo;</span>';
+                                    $nextlink = ($product->page < $product->pages) ? '<a href="?controller=pages&action=products'.$link.'&page=' . ($product->page + 1) . '" title="Next page">&rsaquo;</a> <a href="?controller=pages&action=products&page=' . $product->pages . '" title="Last page">&raquo;</a>' : '<span class="disabled">&rsaquo;</span> <span class="disabled">&raquo;</span>';
 
                                     // Display the paging information
                                     echo '<div id="paging"><div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><p>', $prevlink, '</p></div> <div class="col-lg-5 col-md-7 col-sm-8 col-xs-8"><p>Page ', $product->page, ' of ', $product->pages, ' pages, displaying ', $product->start, '-', $product->end, ' of ', $product->total, ' results </p></div><div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><p>', $nextlink, ' </p></div></div>';
@@ -46,7 +46,7 @@
                             ?>                           
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-3 col-xs-12">
-                            <a href="?controller=pages&action=products"><button class="all-products-button">Diğer Ürünleri Göster</button></a>
+                            <a class="keywords-button btn btn-default" href="?controller=pages&action=products">Diğer Ürünleri Göster</a>
                         </div>
                 </div>
                 <?php for($i = 0; $i <  sizeof($productList); $i++) { ?>

@@ -16,6 +16,7 @@ $navbarColor = $template["NavbarColor"];
 $navbarOpacity = $template["NavbarOpacity"];
 $footerColor = $template["FooterColor"];
 $footerOpacity = $template["FooterOpacity"];
+$footerDescription = $template["FooterDescription"];
 $background = $template["Background"];
 $backgroundColor = $template["BackgroundColor"];
 $fontFamily = $template["FontFamily"];
