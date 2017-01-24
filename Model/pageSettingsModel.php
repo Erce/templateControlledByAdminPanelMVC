@@ -6,7 +6,10 @@
  * and open the template in the editor.
  */
 
+require_once 'Model/loggerModel.php'; 
+
 class PageModel {
+    private $logger;
     private $pageList = array();
     private $pageRow = array();
     private $pageId;
@@ -25,47 +28,59 @@ class PageModel {
     private $description;
     private $keywords;
     private $template_id;
-       
+    private $page_text;
+    private $slider_text;
+
+
     public function __construct($pageName) {
         $this->setPage($pageName);
+        $this->logger = new Logger();
     }
     
     public function setPage($pageName) {
-        $db = Db::getInstance();
-        $req = $db->prepare("SELECT * FROM pages where name='$pageName'");
-        $req->execute() or die();
-        $row = $req->fetch();
-        if(isset($row['id'])) { $this->pageId = $row['id'];}
-        if(isset($row['name'])) { $this->name = $row['name'];}
-        if(isset($row['logourl'])) { $this->logourl = $row['logourl'];}
-        if(isset($row['title'])) { $this->title = $row['title'];}
-        if(isset($row['navbar'])) { $this->navbar = $row['navbar'];}
-        if(isset($row['navbar_color'])) { $this->navbar_color = $row['navbar_color'];}
-        if(isset($row['navbar_opacity'])) { $this->navbar_opacity = $row['navbar_opacity'];}
-        if(isset($row['slider'])) { $this->slider = $row['slider'];}
-        if(isset($row['slider_opacity'])) { $this->slider_opacity = $row['slider_opacity'];}
-        if(isset($row['footer'])) { $this->footer = $row['footer'];}
-        if(isset($row['footer_color'])) { $this->footer_color = $row['footer_color'];}
-        if(isset($row['footer_opacity'])) { $this->footer_opacity = $row['footer_opacity'];}
-        if(isset($row['description'])) { $this->description = $row['description'];}
-        if(isset($row['keywords'])) { $this->keywords = $row['keywords'];}
-        $this->pageRow = array( "Id" => $this->pageId,
-                                "Name" => $this->name,
-                                "ImgUrl" => $this->logourl,
-                                "Title" => $this->title,
-                                "Navbar" => $this->navbar,
-                                "NavbarColor" => $this->navbar_color,
-                                "NavbarOpacity" => $this->navbar_opacity,
-                                "Slider" => $this->slider,
-                                "SliderOpacity" => $this->slider_opacity,
-                                "Footer" => $this->footer,
-                                "FooterColor" => $this->footer_color,
-                                "FooterOpacity" => $this->footer_opacity,
-                                "Description" => $this->description,
-                                "Keywords" => $this->keywords);
+        try {
+            $db = Db::getInstance();
+            $req = $db->prepare("SELECT * FROM pages where name='$pageName'");
+            $req->execute() or die();
+            $row = $req->fetch();
+            if(isset($row['id'])) { $this->pageId = $row['id'];}
+            if(isset($row['name'])) { $this->name = $row['name'];}
+            if(isset($row['logourl'])) { $this->logourl = $row['logourl'];}
+            if(isset($row['title'])) { $this->title = $row['title'];}
+            if(isset($row['navbar'])) { $this->navbar = $row['navbar'];}
+            if(isset($row['navbar_color'])) { $this->navbar_color = $row['navbar_color'];}
+            if(isset($row['navbar_opacity'])) { $this->navbar_opacity = $row['navbar_opacity'];}
+            if(isset($row['slider'])) { $this->slider = $row['slider'];}
+            if(isset($row['slider_opacity'])) { $this->slider_opacity = $row['slider_opacity'];}
+            if(isset($row['footer'])) { $this->footer = $row['footer'];}
+            if(isset($row['footer_color'])) { $this->footer_color = $row['footer_color'];}
+            if(isset($row['footer_opacity'])) { $this->footer_opacity = $row['footer_opacity'];}
+            if(isset($row['description'])) { $this->description = $row['description'];}
+            if(isset($row['keywords'])) { $this->keywords = $row['keywords'];}
+            if(isset($row['page_text'])) { $this->page_text = $row['page_text'];}
+            if(isset($row['slider_text'])) { $this->slider_text = $row['slider_text'];}
+            $this->pageRow = array( "Id" => $this->pageId,
+                                    "Name" => $this->name,
+                                    "ImgUrl" => $this->logourl,
+                                    "Title" => $this->title,
+                                    "Navbar" => $this->navbar,
+                                    "NavbarColor" => $this->navbar_color,
+                                    "NavbarOpacity" => $this->navbar_opacity,
+                                    "Slider" => $this->slider,
+                                    "SliderOpacity" => $this->slider_opacity,
+                                    "Footer" => $this->footer,
+                                    "FooterColor" => $this->footer_color,
+                                    "FooterOpacity" => $this->footer_opacity,
+                                    "Description" => $this->description,
+                                    "Keywords" => $this->keywords,
+                                    "PageText" => $this->page_text,
+                                    "SliderText" => $this->slider_text);
 
-        array_push($this->pageList, $this->pageRow);
-    }
+            array_push($this->pageList, $this->pageRow);
+        } catch (Exception $exc) {
+            $this->logger->setMessage("pageSettingsModel->setPage()");
+        }
+        }
     
     public function getPageRow() {
         return $this->pageRow;
@@ -87,24 +102,28 @@ class PageModel {
                                     . " footer_color='%s',"
                                     . " footer_opacity='%s',"
                                     . " description='%s',"
-                                    . " keywords='%s'" 
+                                    . " keywords='%s',"
+                                    . " page_text='%s',"
+                                    . " slider_text='%s'"
                                     . " WHERE id='%s'",
-                        mysql_real_escape_string($pageSettingsArray['ImgUrl']),
-                        mysql_real_escape_string($pageSettingsArray['Title']),
-                        mysql_real_escape_string($pageSettingsArray['Navbar']),
-                        mysql_real_escape_string($pageSettingsArray['NavbarColor']),
-                        mysql_real_escape_string($pageSettingsArray['NavbarOpacity']),
-                        mysql_real_escape_string($pageSettingsArray['Slider']),
-                        mysql_real_escape_string($pageSettingsArray['Footer']),
-                        mysql_real_escape_string($pageSettingsArray['FooterColor']),
-                        mysql_real_escape_string($pageSettingsArray['FooterOpacity']),
-                        mysql_real_escape_string($pageSettingsArray['Description']),
-                        mysql_real_escape_string($pageSettingsArray['Keywords']),
-                        mysql_real_escape_string($pageSettingsArray['Id']));
+                        $pageSettingsArray['ImgUrl'],
+                        $pageSettingsArray['Title'],
+                        $pageSettingsArray['Navbar'],
+                        $pageSettingsArray['NavbarColor'],
+                        $pageSettingsArray['NavbarOpacity'],
+                        $pageSettingsArray['Slider'],
+                        $pageSettingsArray['Footer'],
+                        $pageSettingsArray['FooterColor'],
+                        $pageSettingsArray['FooterOpacity'],
+                        $pageSettingsArray['Description'],
+                        $pageSettingsArray['Keywords'],
+                        $pageSettingsArray['PageText'],
+                        $pageSettingsArray['SliderText'],
+                        $pageSettingsArray['Id']);
             $req = $db->prepare($query);
             $req->execute();
         } catch (Exception $exc) {
-            echo $exc->getTraceAsString();
+            $this->logger->setMessage("pageSettingsModel->update()");
         }
     }
 }

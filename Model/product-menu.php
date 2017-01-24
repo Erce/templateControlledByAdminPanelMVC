@@ -7,10 +7,11 @@
  */
 
 try {
+    require_once 'Model/loggerModel.php';
     require_once ('Model/productCategoriesModel.php');
     $productCategoriesModel = new ProductCategories();
     $productCategoriesList = $productCategoriesModel->selectAllCategories();
-
+    $logger = new Logger();
     function child($id,$productCategoriesList,$add) {
         $parentFlag=0;
         for ($i = 0; $i < count($productCategoriesList); $i++) {
@@ -47,7 +48,7 @@ try {
         }
     }
 } catch (Exception $exc) {
-    echo $exc->getTraceAsString();
+    $this->logger->setMessage("product-menu->()");
 }
 
 

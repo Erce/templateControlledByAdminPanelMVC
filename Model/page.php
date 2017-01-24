@@ -33,7 +33,7 @@ class Page {
     public function setPage($pageName) {
         $db = Db::getInstance();
         $req = $db->prepare("SELECT * FROM pages where name='$pageName'");
-         $req->execute() or die();
+        $req->execute() or die();
         while($row = $req->fetch()) {
             if(isset($row['id'])) { $this->pageId = $row['id'];}
             if(isset($row['name'])) { $this->name = $row['name'];}

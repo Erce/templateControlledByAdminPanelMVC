@@ -1,6 +1,8 @@
 <?php 
 
+require_once 'Model/loggerModel.php'; 
 class Products {
+    private $logger;
     private $productList = array();
     private $productRow = array();
     private $productId;
@@ -27,10 +29,9 @@ class Products {
         try {
             $this->category = $category;
             $this->keyword = $keyword;
-            file_put_contents("log.txt", "productModel -> category= ".$category.PHP_EOL, FILE_APPEND);
-            file_put_contents("log.txt", "productModel -> keyword= ".$keyword.PHP_EOL, FILE_APPEND);           
+            $this->logger = new Logger();         
         } catch (Exception $exc) {
-            file_put_contents("log.txt", "__construct() ->".$exc.PHP_EOL, FILE_APPEND);
+            $this->logger->setMessage("productsModel->__construct()");
         }
     }
     
@@ -47,16 +48,13 @@ class Products {
             $this->req1->execute();
             $this->total = $this->req1->fetch()[0];
         } catch (Exception $exc) {
-            file_put_contents("log.txt", "countProducts() ->".$exc.PHP_EOL, FILE_APPEND);
+            $this->logger->setMessage("productsModel->countProducts()");
         }
     }
 
     public function setPaging($limit) {
         try {
-            file_put_contents("log.txt", "set paging 1".PHP_EOL, FILE_APPEND);
             $this->countProducts();
-            file_put_contents("log.txt", "Total=".$this->total.PHP_EOL, FILE_APPEND);
-            file_put_contents("log.txt", "set paging 2".PHP_EOL, FILE_APPEND);
             $this->limit = $limit;
             // How many pages will there be
             $this->pages = ceil($this->total / $this->limit);
@@ -73,7 +71,7 @@ class Products {
             $this->start = $this->offset + 1;
             $this->end = min(($this->offset + $this->limit), $this->total);
         } catch (Exception $exc) {
-            file_put_contents("log.txt", "setPaging() ->".$exc.PHP_EOL, FILE_APPEND);
+            $this->logger->setMessage("productsModel->setPaging()");
         }
     }
 
@@ -137,7 +135,7 @@ class Products {
                 array_push($this->productList, $this->productRow);
             }    
         } catch (Exception $exc) {
-            file_put_contents("log.txt", "setProductList() ->".$exc.PHP_EOL, FILE_APPEND);
+            $this->logger->setMessage("productsModel->setProductList()");
         }
     }
 
@@ -146,73 +144,79 @@ class Products {
     }
     
     public function getProduct($id) {
-        $db = Db::getInstance();
-        $this->query = "SELECT * FROM products WHERE id='".$id."'";
-        $this->req = $db->prepare($this->query);
-        $this->req->execute();
-        $row = $this->req->fetch();
-        if(isset($row['id'])) { $this->productId = $row['id'];}
-        if(isset($row['title'])) { $this->productTitle = $row['title'];}
-        if(isset($row['name'])) { $this->productName = $row['name'];}
-        if(isset($row['imgurl'])) { $this->productImgUrl = $row['imgurl'];}
-        if(isset($row['keywords'])) { $this->productKeywords = $row['keywords'];}
-        if(isset($row['description'])) { $this->productDescription = $row['description'];}
-        if(isset($row['category'])) { $this->productCategory = $row['category'];}
-        $this->productRow = array( "Id" => $this->productId,
-                                   "Title" => $this->productTitle,
-                                   "Name" => $this->productName, 
-                                   "ImgUrl" => $this->productImgUrl,
-                                   "Keywords" => $this->productKeywords,
-                                   "Description" => $this->productDescription, 
-                                   "Category" => $this->productCategory);
-        return $this->productRow;
+        try {
+            $db = Db::getInstance();
+            $this->query = "SELECT * FROM products WHERE id='".$id."'";
+            $this->req = $db->prepare($this->query);
+            $this->req->execute();
+            $row = $this->req->fetch();
+            if(isset($row['id'])) { $this->productId = $row['id'];}
+            if(isset($row['title'])) { $this->productTitle = $row['title'];}
+            if(isset($row['name'])) { $this->productName = $row['name'];}
+            if(isset($row['imgurl'])) { $this->productImgUrl = $row['imgurl'];}
+            if(isset($row['keywords'])) { $this->productKeywords = $row['keywords'];}
+            if(isset($row['description'])) { $this->productDescription = $row['description'];}
+            if(isset($row['category'])) { $this->productCategory = $row['category'];}
+            $this->productRow = array( "Id" => $this->productId,
+                                       "Title" => $this->productTitle,
+                                       "Name" => $this->productName, 
+                                       "ImgUrl" => $this->productImgUrl,
+                                       "Keywords" => $this->productKeywords,
+                                       "Description" => $this->productDescription, 
+                                       "Category" => $this->productCategory);
+            return $this->productRow;
+        } catch (Exception $exc) {
+            $this->logger->setMessage("productsModel->getProduct()");
+        }
     }
     
     public function update($productArray) {
-        $db = Db::getInstance();
-        //For setting uploads directory
-        $path = 'uploads';
-        if ( !is_dir($path)) {
-            mkdir($path);
-        }
-        //Writes the photo to the server
-        if(!file_exists($productArray["Target"]))
-        {  
-            if(move_uploaded_file($productArray["TmpName"], $productArray["Target"])) { 
-                file_put_contents("log.txt", "photoModel -> in if move uploaded file".PHP_EOL, FILE_APPEND);
+        try {
+            $db = Db::getInstance();
+            //For setting uploads directory
+            $path = 'uploads';
+            if ( !is_dir($path)) {
+                mkdir($path);
+            }
+            //Writes the photo to the server
+            if(!file_exists($productArray["Target"]))
+            {  
+                if(move_uploaded_file($productArray["TmpName"], $productArray["Target"])) { 
+                    $query = sprintf("UPDATE products SET title='%s', name='%s', imgurl='%s', keywords='%s', description='%s', category='%s' WHERE id='%s'",
+                                    mysql_real_escape_string($productArray['Title']),
+                                    mysql_real_escape_string($productArray['Name']),
+                                    mysql_real_escape_string($productArray['ImgUrl']),
+                                    mysql_real_escape_string($productArray['Keywords']),
+                                    mysql_real_escape_string($productArray['Description']),
+                                    mysql_real_escape_string($productArray['Category']),
+                                    mysql_real_escape_string($productArray['Id']));
+                    $this->req = $db->prepare($query);
+                    $this->req->execute();
+                    //mysql_query($query) or die(mysql_error());
+                    echo "The file ". basename( $productArray['Name']). " has been uploaded, and your information has been added to the directory";
+                }
+                else {
+                //Gives and error if its not
+                echo "Sorry, there was a problem uploading your file.";
+                }
+            }
+            else {    
                 $query = sprintf("UPDATE products SET title='%s', name='%s', imgurl='%s', keywords='%s', description='%s', category='%s' WHERE id='%s'",
-                                mysql_real_escape_string($productArray['Title']),
-                                mysql_real_escape_string($productArray['Name']),
-                                mysql_real_escape_string($productArray['ImgUrl']),
-                                mysql_real_escape_string($productArray['Keywords']),
-                                mysql_real_escape_string($productArray['Description']),
-                                mysql_real_escape_string($productArray['Category']),
-                                mysql_real_escape_string($productArray['Id']));
+                                    mysql_real_escape_string($productArray['Title']),
+                                    mysql_real_escape_string($productArray['Name']),
+                                    mysql_real_escape_string($productArray['ImgUrl']),
+                                    mysql_real_escape_string($productArray['Keywords']),
+                                    mysql_real_escape_string($productArray['Description']),
+                                    mysql_real_escape_string($productArray['Category']),
+                                    mysql_real_escape_string($productArray['Id']));
+
+                //Writes the information to the database
                 $this->req = $db->prepare($query);
                 $this->req->execute();
-                //mysql_query($query) or die(mysql_error());
-                echo "The file ". basename( $productArray['Name']). " has been uploaded, and your information has been added to the directory";
+                //mysql_query($query) or die(mysql_error());     
             }
-            else {
-            //Gives and error if its not
-            echo "Sorry, there was a problem uploading your file.";
-            }
-        }
-        else {    
-            file_put_contents("log.txt", "elseeeeeeeeeeeeeeeeeeeeeeeeeeeeeee".PHP_EOL, FILE_APPEND);
-            $query = sprintf("UPDATE products SET title='%s', name='%s', imgurl='%s', keywords='%s', description='%s', category='%s' WHERE id='%s'",
-                                mysql_real_escape_string($productArray['Title']),
-                                mysql_real_escape_string($productArray['Name']),
-                                mysql_real_escape_string($productArray['ImgUrl']),
-                                mysql_real_escape_string($productArray['Keywords']),
-                                mysql_real_escape_string($productArray['Description']),
-                                mysql_real_escape_string($productArray['Category']),
-                                mysql_real_escape_string($productArray['Id']));
-
-            //Writes the information to the database
-            $this->req = $db->prepare($query);
-            $this->req->execute();
-            //mysql_query($query) or die(mysql_error());     
+        } catch (Exception $exc) {
+            $this->logger->setMessage("productsModel->update()");
         }
     }
     
@@ -232,7 +236,7 @@ class Products {
                 unlink($file);
             }   
         } catch (Exception $exc) {
-            file_put_contents("log.txt", "productsModel => delete()".PHP_EOL, FILE_APPEND);
+            $this->logger->setMessage("productsModel->delete()");
         }
     }
     
@@ -255,7 +259,7 @@ class Products {
                 echo "Sorry, there was a problem uploading your file.";
             }    
         } catch (Exception $exc) {
-            file_put_contents("log.txt", "productsModel => add()".PHP_EOL, FILE_APPEND);
+            $this->logger->setMessage("productsModel->add()");
         }
     }
     
@@ -269,7 +273,6 @@ class Products {
             $req->execute();  
             $productList = array();
             while($row = $req->fetch()) {
-                file_put_contents("log.txt", "productsModel => randomProductList() ID====>".$row['id'].PHP_EOL, FILE_APPEND);
                 if(isset($row['id'])) { $this->productId = $row['id'];}
                 if(isset($row['title'])) { $this->productTitle = $row['title'];}
                 if(isset($row['name'])) { $this->productName = $row['name'];}
@@ -288,14 +291,18 @@ class Products {
             }   
             return $productList;
         } catch (Exception $exc) {
-            file_put_contents("log.txt", "productsModel => randomProductList()".PHP_EOL, FILE_APPEND);
+            $this->logger->setMessage("productsModel->randomProductList()");
         }
     }
     
     public function preg_trim($string) {
-        $string = str_replace(' ; ', ';', $string);
-        $string = str_replace(' ;', ';', $string);
-        $string = str_replace('; ', ';', $string);
-        return $string;
+        try {
+            $string = str_replace(' ; ', ';', $string);
+            $string = str_replace(' ;', ';', $string);
+            $string = str_replace('; ', ';', $string);
+            return $string;
+        } catch (Exception $exc) {
+            $this->logger->setMessage("productsModel->preg_trim()");
+        }
     }
 }

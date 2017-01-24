@@ -80,6 +80,13 @@ body {
     //background: url(../img/bg-content.jpg) 50% 50%;
 }
 
+p.slider-text {
+    color: rgb(70,70,70);
+    font-family: aller;
+    font-weight: lighter;
+    font-size: 12pt;
+}
+
 /*********** NAVBAR DROPDOWN MENU ***********/
 
 .dropdown-menu {
@@ -220,7 +227,7 @@ ul>li>a
   font-size: 12px;
   line-height: 15px;
   //text-align: center;
-  font-weight: 100;
+  font-weight: 500;
   color: #1a1a1a;
   //padding-right:0;
 }
@@ -238,6 +245,12 @@ ul>li>a
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  font-family: aller;
+  font-size: 12px;
+  line-height: 15px;
+  //text-align: center;
+  font-weight: 500;
+  color: #1a1a1a;
 }
 
 ul>li>a:hover,
@@ -245,11 +258,11 @@ ul>li>a:hover,
 .nav > li > ul li > a:hover {
   text-decoration: none;
   color: #ffffff;
-  background: #e85356;
+  background: rgb(192,167,97);
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-    background: #e85356;
+    background: rgb(192,167,97);
     color: #ffffff;
 }
 
@@ -317,6 +330,10 @@ ul>li>a:hover,
     height: 100%;
 }
 
+.showcase {
+    display: none;
+}
+
 @media (min-width: 1000px) {
     .row-product-show {
         margin-right: 10%;
@@ -382,7 +399,8 @@ ul>li>a:hover,
     border-radius: 5px;
     margin: 5px;
     font-size: 11pt;
-    font-family: aller;
+    color: rgba(20,20,20,0.7);
+    font-family: sans-serif;
 }
 
 .btn {
@@ -434,7 +452,7 @@ ul>li>a:hover,
 
 .products-container {
     padding: 0;
-    margin-top: 8%;
+    margin-top: 3%;
     background-color: rgba(240,240,240,0.6);
 }
 
@@ -463,6 +481,7 @@ ul>li>a:hover,
     color: rgb(20,20,20);
     font-family: sans-serif;
     opacity: 0.7;
+    font-size: 1vw;
 }
 
 .other-products-text-name {
@@ -472,6 +491,7 @@ ul>li>a:hover,
     color: rgb(20,20,20);
     font-family: sans-serif;
     opacity: 0.7;
+    font-size: 0.8vw;
 }
 
 .other-products-container {
@@ -479,6 +499,8 @@ ul>li>a:hover,
     padding: 5px;
     border-bottom: 1px dashed rgba(50,50,50,0.1);
     min-height: 70px;
+    height: auto;
+    overflow: hidden;
 }
 /*********** PRODUCTS *************/
 
@@ -710,9 +732,10 @@ div>.form-container{
 }
 
 .about-text {
+    
     font-family: aller;
     font-weight: lighter;
-    font-size: 10pt;
+    font-size: 12pt;
 }
 
 /*********** ABOUT ************/
@@ -889,7 +912,7 @@ div>.form-container{
 .footer-text {
     color: rgb(200,200,200);
     font-family: sans-serif;
-    font-size: 12pt;
+    font-size: 10pt;
 }
 
 .footer-social {

@@ -7,8 +7,10 @@
  */
 
 require_once 'Model/siteSettingsModel.php';
+require_once 'Model/loggerModel.php'; 
 
 class TemplateModel extends SiteSettingsModel {
+    private $logger;
     private $siteSettingsObj;
     private $pageList = array();
     private $pageRow = array();
@@ -30,46 +32,51 @@ class TemplateModel extends SiteSettingsModel {
     private $template_id;
        
     public function __construct() {
+        $this->logger = new Logger();
         $this->setSiteSettingsList();
         $this->siteSettingsObj = $this->getSiteSettingsOn();
     }
     
     public function setTemplate() {
-        $db = Db::getInstance();
-        $req = $db->prepare("SELECT * FROM template where id='".$this->siteSettingsObj[0]["Id"]."'");
-        $req->execute() or die();
-        $row = $req->fetch();
-        if(isset($row['id'])) { $this->pageId = $row['id'];}
-        if(isset($row['name'])) { $this->name = $row['name'];}
-        if(isset($row['logourl'])) { $this->logourl = $row['logourl'];}
-        if(isset($row['title'])) { $this->title = $row['title'];}
-        if(isset($row['navbar'])) { $this->navbar = $row['navbar'];}
-        if(isset($row['navbar_color'])) { $this->navbar_color = $row['navbar_color'];}
-        if(isset($row['navbar_opacity'])) { $this->navbar_opacity = $row['navbar_opacity'];}
-        if(isset($row['slider'])) { $this->slider = $row['slider'];}
-        if(isset($row['slider_opacity'])) { $this->slider_opacity = $row['slider_opacity'];}
-        if(isset($row['footer'])) { $this->footer = $row['footer'];}
-        if(isset($row['footer_color'])) { $this->footer_color = $row['footer_color'];}
-        if(isset($row['footer_opacity'])) { $this->footer_opacity = $row['footer_opacity'];}
-        if(isset($row['description'])) { $this->description = $row['description'];}
-        if(isset($row['keywords'])) { $this->keywords = $row['keywords'];}
-        $this->pageRow = array( "Id" => $this->pageId,
-                                "Name" => $this->name,
-                                "Logourl" => $this->logourl,
-                                "Title" => $this->title,
-                                "Navbar" => $this->navbar,
-                                "NavbarColor" => $this->navbar_color,
-                                "NavbarOpacity" => $this->navbar_opacity,
-                                "Slider" => $this->slider,
-                                "SliderOpacity" => $this->slider_opacity,
-                                "Footer" => $this->footer,
-                                "FooterColor" => $this->footer_color,
-                                "FooterOpacity" => $this->footer_opacity,
-                                "Description" => $this->description,
-                                "Keywords" => $this->keywords);
+        try {
+            $db = Db::getInstance();
+            $req = $db->prepare("SELECT * FROM template where id='".$this->siteSettingsObj[0]["Id"]."'");
+            $req->execute() or die();
+            $row = $req->fetch();
+            if(isset($row['id'])) { $this->pageId = $row['id'];}
+            if(isset($row['name'])) { $this->name = $row['name'];}
+            if(isset($row['logourl'])) { $this->logourl = $row['logourl'];}
+            if(isset($row['title'])) { $this->title = $row['title'];}
+            if(isset($row['navbar'])) { $this->navbar = $row['navbar'];}
+            if(isset($row['navbar_color'])) { $this->navbar_color = $row['navbar_color'];}
+            if(isset($row['navbar_opacity'])) { $this->navbar_opacity = $row['navbar_opacity'];}
+            if(isset($row['slider'])) { $this->slider = $row['slider'];}
+            if(isset($row['slider_opacity'])) { $this->slider_opacity = $row['slider_opacity'];}
+            if(isset($row['footer'])) { $this->footer = $row['footer'];}
+            if(isset($row['footer_color'])) { $this->footer_color = $row['footer_color'];}
+            if(isset($row['footer_opacity'])) { $this->footer_opacity = $row['footer_opacity'];}
+            if(isset($row['description'])) { $this->description = $row['description'];}
+            if(isset($row['keywords'])) { $this->keywords = $row['keywords'];}
+            $this->pageRow = array( "Id" => $this->pageId,
+                                    "Name" => $this->name,
+                                    "Logourl" => $this->logourl,
+                                    "Title" => $this->title,
+                                    "Navbar" => $this->navbar,
+                                    "NavbarColor" => $this->navbar_color,
+                                    "NavbarOpacity" => $this->navbar_opacity,
+                                    "Slider" => $this->slider,
+                                    "SliderOpacity" => $this->slider_opacity,
+                                    "Footer" => $this->footer,
+                                    "FooterColor" => $this->footer_color,
+                                    "FooterOpacity" => $this->footer_opacity,
+                                    "Description" => $this->description,
+                                    "Keywords" => $this->keywords);
 
-        array_push($this->pageList, $this->pageRow);
-    }
+            array_push($this->pageList, $this->pageRow);
+        } catch (Exception $exc) {
+            $this->logger->setMessage("templateModel->setTemplate()");
+        }
+        }
     
     public function getPageRow() {
         return $this->pageRow;
@@ -104,7 +111,7 @@ class TemplateModel extends SiteSettingsModel {
             $req = $db->prepare($query);
             $req->execute();
         } catch (Exception $exc) {
-            echo $exc->getTraceAsString();
+            $this->logger->setMessage("templateModel->update()");
         }
     }
 }

@@ -8,6 +8,7 @@
 
     
 class SocialLinks {
+    private $logger;
     private $googlePlus;
     private $facebook;
     private $twitter;
@@ -15,7 +16,7 @@ class SocialLinks {
     private $socialLinksRow = array();
     
     public function __construct() {
-
+        $this->logger = new Logger();
     }
     
     public function setSocialLinksList() {
@@ -31,7 +32,7 @@ class SocialLinks {
                 array_push($this->socialLinksList, $this->socialLinksRow);
             }   
         } catch (Exception $exc) {
-            echo $exc->getTraceAsString();
+            $this->logger->setMessage("socialLinksModel->setSocialLinksList()");
         }
     }
     
@@ -40,23 +41,31 @@ class SocialLinks {
     }
 
     public function addSocialLinks($socialLinksArray) {    
-        $db = Db::getInstance();
-        for($i=0; $i<sizeof($socialLinksArray); $i++) {
-            $query = "INSERT INTO sociallinks (name,url) VALUES ('".$socialLinksArray[$i]['Name']."', '".$socialLinksArray[$i]['Url']."')";
-            $req = $db->prepare($query);
-            $req->execute();
+        try {
+            $db = Db::getInstance();
+            for($i=0; $i<sizeof($socialLinksArray); $i++) {
+                $query = "INSERT INTO sociallinks (name,url) VALUES ('".$socialLinksArray[$i]['Name']."', '".$socialLinksArray[$i]['Url']."')";
+                $req = $db->prepare($query);
+                $req->execute();
+            }
+            header("Location: ".$root."index.php?controller=pages&action=settings&subpage=sociallinksettings");
+        } catch (Exception $exc) {
+            $this->logger->setMessage("socialLinksModel->addSocialLinks()");
         }
-        header("Location: ".$root."index.php?controller=pages&action=settings&subpage=sociallinksettings");
     }
     
     public function updateSocialLinks($socialLinksArray) {
-        $db = Db::getInstance();
-        for($i=0; $i<sizeof($socialLinksArray); $i++) {
-            $query = sprintf("UPDATE sociallinks SET url='%s' WHERE name='%s'",
-                            $socialLinksArray[$i]['Url'],
-                            $socialLinksArray[$i]['Name']);
-            $req = $db->prepare($query);
-            $req->execute();
+        try {
+            $db = Db::getInstance();
+            for($i=0; $i<sizeof($socialLinksArray); $i++) {
+                $query = sprintf("UPDATE sociallinks SET url='%s' WHERE name='%s'",
+                                $socialLinksArray[$i]['Url'],
+                                $socialLinksArray[$i]['Name']);
+                $req = $db->prepare($query);
+                $req->execute();
+            }
+        } catch (Exception $exc) {
+            $this->logger->setMessage("socialLinksModel->updateSocialLinks()");
         }
     }
     

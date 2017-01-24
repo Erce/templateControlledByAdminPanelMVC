@@ -70,10 +70,10 @@
                         <?php for ($i = 0; $i < 8; $i++) { ?>
                                 <a href="?controller=pages&action=products&product_id=<?php echo $randomProductList[$i]["Id"] ?>">
                                     <div class="other-products-container vcenter">
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="col-lg-5 col-md-4 col-sm-4 col-xs-4">
                                             <img class="img-thumbnail" src="uploads/<?php echo $randomProductList[$i]["ImgUrl"]; ?>" height="60px" width="100%">
                                         </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                        <div class="col-lg-7 col-md-8 col-sm-8 col-xs-8">
                                             <h4 class="other-products-text-title"><?php echo $randomProductList[$i]["Title"]; ?></h4>
                                             <h5 class="other-products-text-name"><?php echo $randomProductList[$i]["Name"]; ?></h5>
                                         </div>
