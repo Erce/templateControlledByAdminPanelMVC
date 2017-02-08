@@ -7,7 +7,9 @@
  */
 
 if(isset($_POST['email']) && isset($_POST['captcha'])) {
-    $email_to = "ercecanbalcioglu@gmail.com";
+    file_put_contents("log.txt",  $_POST["contactEmail"], FILE_APPEND);
+    $email_to = $_POST["contactEmail"];
+    //$this->logger->setMessage("contactController->()".$pageList[0]["ContactEmail"]);
     $email_subject = "Form Info";
 
     session_start();

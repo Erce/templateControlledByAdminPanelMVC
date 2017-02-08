@@ -481,7 +481,7 @@ ul>li>a:hover,
     color: rgb(20,20,20);
     font-family: sans-serif;
     opacity: 0.7;
-    font-size: 1vw;
+    font-size: 1.3vw;
 }
 
 .other-products-text-name {
@@ -491,7 +491,17 @@ ul>li>a:hover,
     color: rgb(20,20,20);
     font-family: sans-serif;
     opacity: 0.7;
-    font-size: 0.8vw;
+    font-size: 0.9vw;
+}
+
+@media (max-width: 800px) {
+    .other-products-text-title {
+        font-size: 3.5vw;
+    }
+
+    .other-products-text-name {
+        font-size: 3.2vw;
+    }   
 }
 
 .other-products-container {
@@ -704,8 +714,8 @@ div>.form-container{
 /*********** ABOUT ************/
 
 .about-container {
-    margin-top: 100px;
-    padding-top: 80px;
+    //margin-top: 100px;
+    padding-top: 50px;
     font-family: aller;
     min-height: calc(100vh - 200px);
 }
@@ -982,7 +992,7 @@ div>.form-container{
 }
 
 .list-social {
-    margin-top: 10%;
+    //margin-top: 10%;
 }
 
 @media (max-width: 800px) {
@@ -999,8 +1009,16 @@ div>.form-container{
 /************** FOOTER ****************/
 
 .vertical-align {
+    min-height: 100%;
     display:flex;
     //justify-content:center;
     align-items: center;
     //flex-flow: column;
+}
+
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }

@@ -22,6 +22,7 @@
                     <div class="col-md-12">
                         <label class="sr-only" for="email">Email</label>
                         <input class="form-control" type="email" name="email" id="email" placeholder="E-mail">
+                        <input class="form-control" type="hidden" name="contactEmail" id="contactEmail" value="<?php echo $pageList[0]["ContactEmail"]; ?>">
                     </div>
                 </div>
                 <div class="form-group">
