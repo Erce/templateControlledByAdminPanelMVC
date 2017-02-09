@@ -20,7 +20,7 @@
             <div class="row button-div">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="col-lg-9 col-md-8 col-sm-9 col-xs-6">
-                        <h1 class="product-title"><?php echo $productList["Title"]; ?></h1>
+                        <!--<h3 class="product-title"><?php echo $productList["Title"]; ?></h3>-->
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-3 col-xs-6">        
                         <a class="keywords-button btn btn-default" href="?controller=pages&action=products">Diğer Ürünleri Göster</a>
@@ -49,7 +49,13 @@
                             <h5 class="product-text"><?php echo $productList["Description"]; ?></h5>
                         </div>
                         <div class="form-group">
-                            <h4 class="product-text">Anahtar Kelimeler</h4>
+                            <h5 class="product-text"><?php echo "Adet: ".$productList["Stock"]; ?></h5>
+                        </div>
+                        <div class="form-group">
+                            <h5 class="product-text"><?php echo "Fiyat: ".$productList["Price"]; ?></h5>
+                        </div>
+                        <div class="form-group">
+                            <h4 class="product-text product-keywords">Anahtar Kelimeler</h4>
                             <?php 
                             $keywordsArray = preg_replace('/\s+/', '', $productList["Keywords"]);
                             $keywordsArray = split(";", $keywordsArray);
@@ -69,12 +75,12 @@
                         <?php $randomProductList = $products->randomProductList(8); ?>
                         <?php for ($i = 0; $i < 8; $i++) { ?>
                                 <a href="?controller=pages&action=products&product_id=<?php echo $randomProductList[$i]["Id"] ?>">
-                                    <div class="other-products-container vcenter">
+                                    <div class="other-products-container vertical-align-without-min-height">
                                         <div class="col-lg-5 col-md-4 col-sm-4 col-xs-4">
                                             <img class="img-thumbnail" src="uploads/<?php echo $randomProductList[$i]["ImgUrl"]; ?>" height="60px" width="100%">
                                         </div>
                                         <div class="col-lg-7 col-md-8 col-sm-8 col-xs-8">
-                                            <h4 class="other-products-text-title"><?php echo $randomProductList[$i]["Title"]; ?></h4>
+                                            <!--<h4 class="other-products-text-title"><?php echo $randomProductList[$i]["Title"]; ?></h4>-->
                                             <h5 class="other-products-text-name"><?php echo $randomProductList[$i]["Name"]; ?></h5>
                                         </div>
                                     </div>

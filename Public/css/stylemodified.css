@@ -51,10 +51,10 @@ body {
     font-family: sans-serif;
 }
 
-.vertical-align {
+/*.vertical-align {
     display: flex;
     align-items: center;
-}
+}*/
 //@import url("Public/css/dynamicStyle.php");
 
 .bg-content>.container-fluid {
@@ -78,6 +78,12 @@ body {
     margin-top: 82px;
     min-height: calc(60vh);
     //background: url(../img/bg-content.jpg) 50% 50%;
+}
+
+@media (max-width: 412px) {
+    .bg-content {
+        margin-top: 20vh;
+    }
 }
 
 p.slider-text {
@@ -192,13 +198,24 @@ nav,
 .navbar,
 .navbar-default,
 .navbar-fixed-top {
+    padding-left: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
     background: rgba(255,255,255,0.9);
     border-bottom: 1px solid rgb(150,150,150);
+    max-height: 150px;
     /*-webkit-box-shadow: 0px 8px 60px 0px rgba(231,166,26,0.3);
     -moz-box-shadow: 0px 8px 60px 0px rgba(231,166,26,0.3);
     box-shadow: 0px 8px 60px 0px rgba(231,166,26,0.3);*/
+}
+
+.navbar-brand {
+  padding: 0px; /* firefox bug fix */
+}
+.navbar-brand>img {
+  height: 100%;
+  //padding: 15px; /* firefox bug fix */
+  width: auto;
 }
 
 .navbar-nav {
@@ -473,6 +490,7 @@ ul>li>a:hover,
     color: rgb(20,20,20);
     font-family: sans-serif;
     opacity: 0.7;
+    margin-bottom: 20px;
 }
 
 .other-products-text-title {
@@ -481,7 +499,7 @@ ul>li>a:hover,
     color: rgb(20,20,20);
     font-family: sans-serif;
     opacity: 0.7;
-    font-size: 1.3vw;
+    font-size: 1.1vw;
 }
 
 .other-products-text-name {
@@ -495,16 +513,30 @@ ul>li>a:hover,
 }
 
 @media (max-width: 800px) {
+    .other-products-text {
+        margin-top: 20px;
+    }
+
     .other-products-text-title {
         font-size: 3.5vw;
     }
 
     .other-products-text-name {
         font-size: 3.2vw;
-    }   
+    }
+    
+    .product-info {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .product-keywords {
+        margin-top: 30px;
+    }
 }
 
 .other-products-container {
+    padding-top: 50%;
     width: 100%;
     padding: 5px;
     border-bottom: 1px dashed rgba(50,50,50,0.1);
@@ -695,10 +727,10 @@ div>.form-container{
 }
 
 .bg-content>.contact-container {
-    margin-top: 10%; 
+    margin-top: 5%; 
     margin-bottom: 0px; 
-    padding-top: 70px; 
-    padding-bottom: 70px; 
+    padding-top: 40px; 
+    padding-bottom: 30px; 
     min-height: calc(100vh - 100px);
 }
 
@@ -759,6 +791,10 @@ div>.form-container{
 }
 
 .slider-padding {}
+
+.carousel-image {
+    width: 100%;
+}
 
 #carousel-example {
     //margin-top: 50px;
@@ -1010,6 +1046,13 @@ div>.form-container{
 
 .vertical-align {
     min-height: 100%;
+    display:flex;
+    //justify-content:center;
+    align-items: center;
+    //flex-flow: column;
+}
+
+.vertical-align-without-min-height {
     display:flex;
     //justify-content:center;
     align-items: center;

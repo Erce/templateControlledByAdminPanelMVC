@@ -31,6 +31,7 @@ class PageModel {
     private $page_text;
     private $slider_text;
     private $contact_email;
+    private $contact_info;
 
 
     public function __construct($pageName) {
@@ -61,6 +62,7 @@ class PageModel {
             if(isset($row['page_text'])) { $this->page_text = $row['page_text'];}
             if(isset($row['slider_text'])) { $this->slider_text = $row['slider_text'];}
             if(isset($row['contact_email'])) { $this->contact_email = $row['contact_email'];}
+            if(isset($row['contact_info'])) { $this->contact_info = $row['contact_info'];}
             
             $this->pageRow = array( "Id" => $this->pageId,
                                     "Name" => $this->name,
@@ -78,7 +80,8 @@ class PageModel {
                                     "Keywords" => $this->keywords,
                                     "PageText" => $this->page_text,
                                     "SliderText" => $this->slider_text,
-                                    "ContactEmail" => $this->contact_email);
+                                    "ContactEmail" => $this->contact_email,
+                                    "ContactInfo" => $this->contact_info);
 
             array_push($this->pageList, $this->pageRow);
         } catch (Exception $exc) {
@@ -108,7 +111,8 @@ class PageModel {
                                     . " description='%s',"
                                     . " keywords='%s',"
                                     . " page_text='%s',"
-                                    . " slider_text='%s'"
+                                    . " slider_text='%s',"
+                                    . " contact_info='%s'"
                                     . " WHERE id='%s'",
                         $pageSettingsArray['ImgUrl'],
                         $pageSettingsArray['Title'],
@@ -123,6 +127,7 @@ class PageModel {
                         $pageSettingsArray['Keywords'],
                         $pageSettingsArray['PageText'],
                         $pageSettingsArray['SliderText'],
+                        $pageSettingsArray['ContactInfo'],
                         $pageSettingsArray['Id']);
             $req = $db->prepare($query);
             $req->execute();

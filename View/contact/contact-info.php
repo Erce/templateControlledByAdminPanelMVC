@@ -2,6 +2,11 @@
 
         <div class="form-container">
             <!-- Horizontal form bootstrap class defined -->
+            <div class="contact-info">
+                <p>
+                    <?php echo $pageList[0]["ContactInfo"]; ?>
+                </p>
+            </div>
             <div class="row" id="form-messages">
                 <div class="col-md-12"><div id="message-div" class="message-div"></div></div>
             </div>

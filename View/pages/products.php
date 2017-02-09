@@ -38,7 +38,7 @@
                                     $nextlink = ($product->page < $product->pages) ? '<a href="?controller=pages&action=products'.$link.'&page=' . ($product->page + 1) . '" title="Next page">&rsaquo;</a> <a href="?controller=pages&action=products&page=' . $product->pages . '" title="Last page">&raquo;</a>' : '<span class="disabled">&rsaquo;</span> <span class="disabled">&raquo;</span>';
 
                                     // Display the paging information
-                                    echo '<div id="paging"><div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><p>', $prevlink, '</p></div> <div class="col-lg-5 col-md-7 col-sm-8 col-xs-8"><p>Page ', $product->page, ' of ', $product->pages, ' pages, displaying ', $product->start, '-', $product->end, ' of ', $product->total, ' results </p></div><div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><p>', $nextlink, ' </p></div></div>';
+                                    echo '<div id="paging"><div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><p>', $prevlink, '</p></div> <div class="col-lg-5 col-md-7 col-sm-8 col-xs-8"><p>', $product->pages, ' sayfadan ', $product->page, '. gösteriliyor, ', $product->start, '-', $product->end, ' toplam ', $product->total, ' sonuç </p></div><div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><p>', $nextlink, ' </p></div></div>';
 
                                 } catch (Exception $exc) {
                                     echo $exc->getTraceAsString();

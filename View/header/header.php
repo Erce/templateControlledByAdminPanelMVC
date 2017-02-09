@@ -1,12 +1,14 @@
     
     <?php
+        header('Content-Type: text/html; charset=utf-8');
         require_once 'Model/pageSettingsModel.php';
         $page = new PageModel($action);
         $pageList = $page->getPageList();
     ?>
 
+    
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
     <title><?php echo $pageList[0]['Title']; ?> </title>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<?php echo $pageList[0]['Description']; ?>">
     <meta name="keywords" content="<?php echo $pageList[0]['Keywords']; ?>">

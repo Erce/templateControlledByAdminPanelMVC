@@ -8,6 +8,8 @@ class Products {
     private $productId;
     private $productTitle;
     private $productName;
+    private $productStock;
+    private $productPrice;
     private $productImgUrl;
     private $productKeywords;
     private $productDescription;
@@ -26,13 +28,9 @@ class Products {
     public $offset;
     
     public function __construct($category, $keyword) {   
-        try {
-            $this->category = $category;
-            $this->keyword = $keyword;
-            $this->logger = new Logger();         
-        } catch (Exception $exc) {
-            $this->logger->setMessage("productsModel->__construct()");
-        }
+        $this->category = $category;
+        $this->keyword = $keyword;
+        $this->logger = new Logger();
     }
     
     private function countProducts() {
@@ -44,18 +42,18 @@ class Products {
             FROM
                 products
             '
-            .(($this->keyword != "") ? "WHERE keywords LIKE '%".$this->keyword."%'" : "".(($this->category != "") ? "WHERE category='$this->category'" : "")));       
+            .(($this->keyword != "") ? "WHERE keywords='$this->keyword'" : "".(($this->category != "") ? "WHERE category='$this->category'" : "")));       
             $this->req1->execute();
             $this->total = $this->req1->fetch()[0];
-        } catch (Exception $exc) {
+        } catch (Exception $ex) {
             $this->logger->setMessage("productsModel->countProducts()");
         }
     }
 
-    public function setPaging($limit) {
+    public function setPaging() {
         try {
             $this->countProducts();
-            $this->limit = $limit;
+            $this->limit = 8;
             // How many pages will there be
             $this->pages = ceil($this->total / $this->limit);
             // What page are we currently on?
@@ -121,6 +119,8 @@ class Products {
                 if(isset($row['id'])) { $this->productId = $row['id'];}
                 if(isset($row['title'])) { $this->productTitle = $row['title'];}
                 if(isset($row['name'])) { $this->productName = $row['name'];}
+                if(isset($row['stock'])) { $this->productStock = $row['stock'];}
+                if(isset($row['price'])) { $this->productPrice = $row['price'];}
                 if(isset($row['imgurl'])) { $this->productImgUrl = $row['imgurl'];}
                 if(isset($row['keywords'])) { $this->productKeywords = $row['keywords'];}
                 if(isset($row['description'])) { $this->productDescription = $row['description'];}
@@ -128,12 +128,14 @@ class Products {
                 $this->productRow = array(  "Id" => $this->productId,
                                             "Title" => $this->productTitle,
                                             "Name" => $this->productName, 
+                                            "Stock" => $this->productStock,
+                                            "Price" => $this->productPrice,
                                             "ImgUrl" => $this->productImgUrl,
                                             "Keywords" => $this->productKeywords,
                                             "Description" => $this->productDescription, 
                                             "Category" => $this->productCategory);
                 array_push($this->productList, $this->productRow);
-            }    
+            }
         } catch (Exception $exc) {
             $this->logger->setMessage("productsModel->setProductList()");
         }
@@ -153,13 +155,17 @@ class Products {
             if(isset($row['id'])) { $this->productId = $row['id'];}
             if(isset($row['title'])) { $this->productTitle = $row['title'];}
             if(isset($row['name'])) { $this->productName = $row['name'];}
+            if(isset($row['stock'])) { $this->productStock = $row['stock'];}
+            if(isset($row['price'])) { $this->productPrice = $row['price'];}
             if(isset($row['imgurl'])) { $this->productImgUrl = $row['imgurl'];}
             if(isset($row['keywords'])) { $this->productKeywords = $row['keywords'];}
             if(isset($row['description'])) { $this->productDescription = $row['description'];}
             if(isset($row['category'])) { $this->productCategory = $row['category'];}
             $this->productRow = array( "Id" => $this->productId,
                                        "Title" => $this->productTitle,
-                                       "Name" => $this->productName, 
+                                       "Name" => $this->productName,
+                                       "Stock" => $this->productStock,
+                                       "Price" => $this->productPrice,
                                        "ImgUrl" => $this->productImgUrl,
                                        "Keywords" => $this->productKeywords,
                                        "Description" => $this->productDescription, 
@@ -172,9 +178,13 @@ class Products {
     
     public function update($productArray) {
         try {
+            require_once 'Model/photoModel.php';
+            $photoModel = new PhotoModel();
+            $photoModel->update($productArray["PhotoList"], $productArray["Id"]);
+
             $db = Db::getInstance();
             //For setting uploads directory
-            $path = 'uploads';
+            $path = '../uploads';
             if ( !is_dir($path)) {
                 mkdir($path);
             }
@@ -182,14 +192,16 @@ class Products {
             if(!file_exists($productArray["Target"]))
             {  
                 if(move_uploaded_file($productArray["TmpName"], $productArray["Target"])) { 
-                    $query = sprintf("UPDATE products SET title='%s', name='%s', imgurl='%s', keywords='%s', description='%s', category='%s' WHERE id='%s'",
-                                    mysql_real_escape_string($productArray['Title']),
-                                    mysql_real_escape_string($productArray['Name']),
-                                    mysql_real_escape_string($productArray['ImgUrl']),
-                                    mysql_real_escape_string($productArray['Keywords']),
-                                    mysql_real_escape_string($productArray['Description']),
-                                    mysql_real_escape_string($productArray['Category']),
-                                    mysql_real_escape_string($productArray['Id']));
+                    $query = sprintf("UPDATE products SET title='%s', name='%s', stock='%s', price='%s', imgurl='%s', keywords='%s', description='%s', category='%s' WHERE id='%s'",
+                                    $productArray['Title'],
+                                    $productArray['Name'],
+                                    $productArray['Stock'],
+                                    $productArray['Price'],
+                                    $productArray['ImgUrl'],
+                                    $productArray['Keywords'],
+                                    $productArray['Description'],
+                                    $productArray['Category'],
+                                    $productArray['Id']);
                     $this->req = $db->prepare($query);
                     $this->req->execute();
                     //mysql_query($query) or die(mysql_error());
@@ -201,14 +213,16 @@ class Products {
                 }
             }
             else {    
-                $query = sprintf("UPDATE products SET title='%s', name='%s', imgurl='%s', keywords='%s', description='%s', category='%s' WHERE id='%s'",
-                                    mysql_real_escape_string($productArray['Title']),
-                                    mysql_real_escape_string($productArray['Name']),
-                                    mysql_real_escape_string($productArray['ImgUrl']),
-                                    mysql_real_escape_string($productArray['Keywords']),
-                                    mysql_real_escape_string($productArray['Description']),
-                                    mysql_real_escape_string($productArray['Category']),
-                                    mysql_real_escape_string($productArray['Id']));
+                $query = sprintf("UPDATE products SET title='%s', name='%s', stock='%s', price='%s', imgurl='%s', keywords='%s', description='%s', category='%s' WHERE id='%s'",
+                                    $productArray['Title'],
+                                    $productArray['Name'],
+                                    $productArray['Stock'],
+                                    $productArray['Price'],
+                                    $productArray['ImgUrl'],
+                                    $productArray['Keywords'],
+                                    $productArray['Description'],
+                                    $productArray['Category'],
+                                    $productArray['Id']);
 
                 //Writes the information to the database
                 $this->req = $db->prepare($query);
@@ -222,6 +236,9 @@ class Products {
     
     public function delete($id) {
         try {
+            require_once 'Model/photoModel.php';
+            $photoModel = new PhotoModel();
+            $photoModel->delete($id);
             // Connects to your Database
             $db = Db::getInstance();
             $product = $this->getProduct($id);
@@ -230,11 +247,11 @@ class Products {
             $req = $db->prepare($query);
             $req->execute();
 
-            $path = "uploads/";
+            $path = "../uploads/";
             $file = $path.$product['ImgUrl'];
             if (file_exists($file)) {
                 unlink($file);
-            }   
+            } 
         } catch (Exception $exc) {
             $this->logger->setMessage("productsModel->delete()");
         }
@@ -245,10 +262,16 @@ class Products {
             // Connects to your Database
             //Writes the information to the database
             $db = Db::getInstance();
-            $this->query = "INSERT INTO products (title,name,imgurl,keywords,description,category)".
-                            "VALUES ('".$productArray['Title']."', '".$productArray['Name']."', '".$productArray['ImgUrl']."', '".$productArray['Keywords']."', '".$productArray['Description']."', '".$productArray['Category']."')" or die(file_put_contents("log.txt", "in mysql query".mysql_error().PHP_EOL, FILE_APPEND));
+            $this->query = "INSERT INTO products (title,name,stock,price,imgurl,keywords,description,category)".
+                            "VALUES ('".$productArray['Title']."', '".$productArray['Name']."', '".$productArray['Stock']."', '".$productArray['Price']."', '".$productArray['ImgUrl']."', '".$productArray['Keywords']."', '".$productArray['Description']."', '".$productArray['Category']."')" or die(file_put_contents("log.txt", "in mysql query".mysql_error().PHP_EOL, FILE_APPEND));
             $this->req = $db->prepare($this->query);
             $this->req->execute();
+
+            $last_id = $db->lastInsertId();
+            require_once 'Model/photoModel.php';
+            $photoModel = new PhotoModel();
+            $photoModel->add($productArray["PhotoList"], $last_id);
+
             //Writes the photo to the server
             if(move_uploaded_file($productArray['TmpName'], $productArray['Target']))
             {
@@ -257,7 +280,7 @@ class Products {
             else {
                 //Gives and error if its not
                 echo "Sorry, there was a problem uploading your file.";
-            }    
+            }
         } catch (Exception $exc) {
             $this->logger->setMessage("productsModel->add()");
         }
@@ -276,6 +299,8 @@ class Products {
                 if(isset($row['id'])) { $this->productId = $row['id'];}
                 if(isset($row['title'])) { $this->productTitle = $row['title'];}
                 if(isset($row['name'])) { $this->productName = $row['name'];}
+                if(isset($row['stock'])) { $this->productStock = $row['stock'];}
+                if(isset($row['price'])) { $this->productPrice = $row['price'];}
                 if(isset($row['imgurl'])) { $this->productImgUrl = $row['imgurl'];}
                 if(isset($row['keywords'])) { $this->productKeywords = $row['keywords'];}
                 if(isset($row['description'])) { $this->productDescription = $row['description'];}
@@ -283,6 +308,8 @@ class Products {
                 $productRow = array("Id" => $this->productId,
                                     "Title" => $this->productTitle,
                                     "Name" => $this->productName, 
+                                    "Stock" => $this->productStock,
+                                    "Price" => $this->productPrice, 
                                     "ImgUrl" => $this->productImgUrl,
                                     "Keywords" => $this->productKeywords,
                                     "Description" => $this->productDescription, 

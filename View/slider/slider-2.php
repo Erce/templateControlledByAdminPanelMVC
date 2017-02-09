@@ -25,7 +25,7 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="uploads/<?php echo $sliderPhotoList[0]["Name"]; ?>" alt="...">
+                            <img class="carousel-image" src="uploads/<?php echo $sliderPhotoList[0]["Name"]; ?>" alt="...">
                             <div class="carousel-caption">
                                 <h3></h3>
                             </div>
@@ -33,7 +33,7 @@
                     <?php 
                         for ($i = 1; $i < count($sliderPhotoList); $i++) { ?>
                             <div class="item">
-                            <img src="uploads/<?php echo $sliderPhotoList[$i]["Name"]; ?>" alt="...">
+                            <img class="carousel-image" src="uploads/<?php echo $sliderPhotoList[$i]["Name"]; ?>" alt="...">
                             <div class="carousel-caption">
                                 <h3></h3>
                             </div>
