@@ -11,8 +11,9 @@
                 </button>
                 <a href="?controller=pages&action=home" class="navbar-brand"><img class="img-responsive" alt="" src="uploads/<?php echo $logoNavbar; ?>"></a>
             </div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse vertical-align">
-                <div class="col-lg-7 col-md-6 col-sm-8 col-xs-10">
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <div class="col-lg-1 col-md-1 col-sm-1 navbar-right"></div>
+                <div class="col-lg-7 col-md-6 col-sm-8 col-xs-10 navbar-right">
                     <ul class="nav navbar-nav navbar-right">
                       <li class="active"><a href="?controller=pages&action=home">Ana Sayfa</a></li>
                       <li><a href="?controller=pages&action=about">Hakkımızda</a></li>

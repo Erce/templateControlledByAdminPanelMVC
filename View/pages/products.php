@@ -15,7 +15,7 @@
         $product->setPaging(16);
         $product->setProductList();
         $productList = $product->getProductList();
-        $link = (($keyword != "") ? '&keywords='.$keyword : ("".(($category != "") ? '&category='.$category : "")));
+        $link = (($keyword != "") ? '&keyword='.$keyword : ("".(($category != "") ? '&category='.$category : "")));
     } catch (Exception $exc) {
         echo $exc->getTraceAsString();
     }

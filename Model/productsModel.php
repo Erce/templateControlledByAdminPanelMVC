@@ -36,13 +36,13 @@ class Products {
     private function countProducts() {
         try {
             $db = Db::getInstance();
-            $this->req1 = $db->prepare('
+            $this->req1 = $db->prepare("
             SELECT
                 COUNT(*)
             FROM
                 products
-            '
-            .(($this->keyword != "") ? "WHERE keywords='$this->keyword'" : "".(($this->category != "") ? "WHERE category='$this->category'" : "")));       
+            "
+            .(($this->keyword != "") ? "WHERE keywords LIKE '%".$this->keyword."%'" : "".(($this->category != "") ? "WHERE category='$this->category'" : "")));       
             $this->req1->execute();
             $this->total = $this->req1->fetch()[0];
         } catch (Exception $ex) {

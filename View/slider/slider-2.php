@@ -10,7 +10,7 @@
  ?>
 
 
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 slider-2">
                 <div id="carousel-example" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
@@ -41,6 +41,7 @@
                     <?php
                         }
                     ?>
+                        </div>
                   <!-- Controls -->
                   <a class="left carousel-control" href="#carousel-example" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
@@ -55,4 +56,3 @@
                     <p class="slider-text"><?php echo $pageList[0]["SliderText"]; ?></p>
                   </div>
                 </div>
-            </div>
