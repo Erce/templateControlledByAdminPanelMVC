@@ -406,6 +406,23 @@ ul>li>a:hover,
     margin-bottom: 10px;
 }
 
+.page-arrows {
+    font-size: 19pt;
+}
+
+.page-arrow-text {
+    font-size: 12pt;
+    color: #122b40;
+}
+
+.left-arrows {
+    float: left;
+}
+
+.right-arrows {
+    float: right;
+}
+
 .keywords-a {
     width: 70px;
     height: 28px;
@@ -470,7 +487,7 @@ ul>li>a:hover,
 .products-container {
     padding: 0;
     margin-top: 3%;
-    background-color: rgba(240,240,240,0.6);
+    background-color: rgba(240,240,240,0.2);
 }
 
 .container-fluid .container {
@@ -577,7 +594,7 @@ div>.form-container{
 .item-image {
     position: relative;
     overflow: hidden;
-    padding-bottom: 40%;
+    padding-bottom: 70%;
     border-radius: 2px;
 }
 
@@ -807,7 +824,7 @@ div>.form-container{
 
 .block-slogan {
   overflow: hidden;
-  margin-top:70px;
+  margin-top:20px;
   padding-bottom: 44px;
 }
 .block-slogan h2:first-letter {

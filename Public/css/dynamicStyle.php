@@ -32,6 +32,7 @@ $logoFavicon = $template["LogoFavicon"];
     body {
         background: url(uploads/<?php echo $background;?>) 50% 50%;
         background-color: <?php echo $backgroundColor; ?>; 
+        background-size: cover;
         font-size: <?php echo $fontSize."pt"; ?>; 
         font-family: <?php echo $fontFamily; ?>; 
     }
