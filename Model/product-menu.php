@@ -37,13 +37,23 @@ try {
     }
     
     
-    for ($i = 0; $i < count($productCategoriesList); $i++) { 
+    for ($i = 0; $i < count($productCategoriesList); $i++) {       
         if ($productCategoriesList[$i]["ProductCategoryParentId"] == "") {
+            $childFlag=0;
+            for ($k = 0; $k < count($productCategoriesList); $k++) {
+                if($productCategoriesList[$k]["ProductCategoryParentId"] == $productCategoriesList[$i]["ProductCategoryId"]) {
+                    for ($j = 0; $j < count($productCategoriesList); $j++) {
+                        if ($productCategoriesList[$k]["ProductCategoryId"] == $productCategoriesList[$j]["ProductCategoryParentId"]) {
+                            $childFlag=1;
+                        }
+                    } 
+                }
+            }
         ?>
-        <li><a href="?controller=pages&action=products&category=<?php echo $productCategoriesList[$i]["ProductCategoryName"];?>"><?php echo $productCategoriesList[$i]["ProductCategoryListName"];?><span class="caret"></span></a>
-            <ul class="dropdown-menu">
-            <?php child($productCategoriesList[$i]["ProductCategoryId"],$productCategoriesList,"");  ?>
-            </ul>
+        <li><a href="?controller=pages&action=products&category=<?php echo $productCategoriesList[$i]["ProductCategoryName"];?>"><?php echo $productCategoriesList[$i]["ProductCategoryListName"];?><?php if($childFlag == 1) {?><span class="caret"></span> <?php } ?></a>
+            <?php if($childFlag == 1) {?> <ul class="dropdown-menu"> <?php } ?>
+                <?php child($productCategoriesList[$i]["ProductCategoryId"],$productCategoriesList,"");  ?>
+            <?php if($childFlag == 1) {?> </ul> <?php $childFlag=0; } ?>
         </li> <?php
         }
     }
