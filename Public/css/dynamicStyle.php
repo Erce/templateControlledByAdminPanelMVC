@@ -7,7 +7,7 @@
  */
 
 require_once 'Model/siteSettingsModel.php';
-file_put_contents("log.txt", "before template model".PHP_EOL, FILE_APPEND);
+//file_put_contents("log.txt", "before template model".PHP_EOL, FILE_APPEND);
 $siteSettings = new SiteSettingsModel();
 $siteSettings->setSiteSettingsList();
 $template = $siteSettings->getSiteSettingsOn();

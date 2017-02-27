@@ -12,11 +12,10 @@
                 <a href="?controller=pages&action=home" class="navbar-brand"><img class="img-responsive" alt="" src="uploads/<?php echo $logoNavbar; ?>"></a>
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <div class="col-lg-1 col-md-1 col-sm-1 navbar-right"></div>
-                <div class="col-lg-7 col-md-6 col-sm-8 col-xs-10 navbar-right">
+                <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                <div class="col-lg-8 col-md-6 col-sm-8 col-xs-10">
                     <ul class="nav navbar-nav navbar-right">
                       <li class="active"><a href="?controller=pages&action=home">Ana Sayfa</a></li>
-                      <li><a href="?controller=pages&action=about">Hakkımızda</a></li>
                       <li>
                             <a href="?controller=pages&action=products">Ürünler<span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -24,6 +23,7 @@
                             </ul>
                       </li>
                       <li><a href="?controller=pages&action=references">Referanslar</a></li>
+                      <li><a href="?controller=pages&action=about">Hakkımızda</a></li>
                       <li><a href="?controller=pages&action=contact">İletişim</a></li>
                     </ul>
                 </div>

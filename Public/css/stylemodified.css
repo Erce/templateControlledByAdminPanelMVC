@@ -411,8 +411,8 @@ ul>li>a:hover,
 }
 
 .page-arrow-text {
-    font-size: 12pt;
-    color: #122b40;
+    font-size: 11pt;
+    color: #337ab7;
 }
 
 .left-arrows {
@@ -486,7 +486,7 @@ ul>li>a:hover,
 
 .products-container {
     padding: 0;
-    margin-top: 3%;
+    margin-top: 0%;
     background-color: rgba(240,240,240,0.2);
 }
 
