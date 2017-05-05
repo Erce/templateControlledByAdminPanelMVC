@@ -50,10 +50,10 @@ class Products {
         }
     }
 
-    public function setPaging() {
+    public function setPaging($limit) {
         try {
             $this->countProducts();
-            $this->limit = 8;
+            $this->limit = $limit;
             // How many pages will there be
             $this->pages = ceil($this->total / $this->limit);
             // What page are we currently on?

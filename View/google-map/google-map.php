@@ -1,6 +1,13 @@
         
         <?php require_once 'View/google-map/googlemaplinkconvert.php';
             //$longlat = getLatLong();
+            if($pageList[0]["GoogleMapsLink"] != "") {
+                $url = $pageList[0]["GoogleMapsLink"];
+            }
+            else {
+                $url = "https://www.google.com.tr/maps/search/siteler/@39.945089,32.9023899,13.25z";
+            }
+            
         ?>
         <style type="text/css">
             
@@ -14,7 +21,7 @@
         <div id="map"></div>
         <script>
           function initMap() {
-            $url = 'https://www.google.com.tr/maps/place/Etlik,+Ayval%C4%B1+Cd.+No:126,+06010+Ke%C3%A7i%C3%B6ren%2FAnkara/@39.979953,32.8209293,17z/data=!3m1!4b1!4m5!3m4!1s0x14d34c11028fad91:0xf3b8520e023156b9!8m2!3d39.979953!4d32.823118';
+            $url = '<?php echo $url;?>';
 
             $urlParts = $url.split( '/' );
             $getLatLng = $urlParts[6].replace('@','');

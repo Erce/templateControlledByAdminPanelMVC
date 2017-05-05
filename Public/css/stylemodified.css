@@ -75,7 +75,7 @@ body {
 .navbar-ex1-collapse {}
 
 .bg-content {
-    margin-top: 82px;
+    //margin-top: 82px;
     min-height: calc(60vh);
     //background: url(../img/bg-content.jpg) 50% 50%;
 }
@@ -198,6 +198,8 @@ nav,
 .navbar,
 .navbar-default,
 .navbar-fixed-top {
+    position: relative;
+    height: auto;
     padding-left: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -211,9 +213,10 @@ nav,
 
 .navbar-brand {
   padding: 0px; /* firefox bug fix */
+  height: auto;
 }
 .navbar-brand>img {
-  height: 100%;
+  //height: 100%;
   //padding: 15px; /* firefox bug fix */
   width: auto;
 }
@@ -327,8 +330,6 @@ ul>li>a:hover,
 }
 
 .button-div {
-    margin-top: 20px;
-    margin-bottom:8%;
     padding-bottom: 0px;
     border-bottom: 1px dashed rgba(150,150,150,0.3);
 }
@@ -470,11 +471,12 @@ ul>li>a:hover,
     opacity: 0.7;
     font-weight: bold;
     font-family: sans-serif;
-    font-size: 10pt;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .product-img-container-title {
-    font-size: 12pt;
+
 }
 
 .product-img-container-title: hover,.product-img-container-name:hover {
@@ -807,7 +809,9 @@ div>.form-container{
     margin-top: 40px;
 }
 
-.slider-padding {}
+.slider-padding {
+    position:relative;
+}
 
 .carousel-image {
     width: 100%;
@@ -824,8 +828,8 @@ div>.form-container{
 
 .block-slogan {
   overflow: hidden;
-  margin-top:20px;
-  padding-bottom: 44px;
+  margin-top:5px;
+  //padding-bottom: 44px;
 }
 .block-slogan h2:first-letter {
   color: #e85356;

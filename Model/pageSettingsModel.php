@@ -32,6 +32,7 @@ class PageModel {
     private $slider_text;
     private $contact_email;
     private $contact_info;
+    private $google_maps_link;
 
 
     public function __construct($pageName) {
@@ -63,6 +64,7 @@ class PageModel {
             if(isset($row['slider_text'])) { $this->slider_text = $row['slider_text'];}
             if(isset($row['contact_email'])) { $this->contact_email = $row['contact_email'];}
             if(isset($row['contact_info'])) { $this->contact_info = $row['contact_info'];}
+            if(isset($row['google_maps_link'])) { $this->google_maps_link = $row['google_maps_link'];}
             
             $this->pageRow = array( "Id" => $this->pageId,
                                     "Name" => $this->name,
@@ -81,7 +83,8 @@ class PageModel {
                                     "PageText" => $this->page_text,
                                     "SliderText" => $this->slider_text,
                                     "ContactEmail" => $this->contact_email,
-                                    "ContactInfo" => $this->contact_info);
+                                    "ContactInfo" => $this->contact_info, 
+                                    "GoogleMapsLink" => $this->google_maps_link);
 
             array_push($this->pageList, $this->pageRow);
         } catch (Exception $exc) {
@@ -112,7 +115,8 @@ class PageModel {
                                     . " keywords='%s',"
                                     . " page_text='%s',"
                                     . " slider_text='%s',"
-                                    . " contact_info='%s'"
+                                    . " contact_info='%s',"
+                                    . " google_maps_link='%s'"
                                     . " WHERE id='%s'",
                         $pageSettingsArray['ImgUrl'],
                         $pageSettingsArray['Title'],
@@ -128,6 +132,7 @@ class PageModel {
                         $pageSettingsArray['PageText'],
                         $pageSettingsArray['SliderText'],
                         $pageSettingsArray['ContactInfo'],
+                        $pageSettingsArray['GoogleMapsLink'],
                         $pageSettingsArray['Id']);
             $req = $db->prepare($query);
             $req->execute();

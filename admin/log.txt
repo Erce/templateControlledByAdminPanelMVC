@@ -1,0 +1,607 @@
+editphoto before require
+editphoto after require
+editphoto after new obj
+editphoto after edit photo
+editphoto before require
+editphoto after require
+editphoto after new obj
+editphoto after edit photo
+editphoto before require
+editphoto after require
+editphoto after new obj
+editphoto after edit photo
+editphoto before require
+editphoto after require
+editphoto after new obj
+editphoto after edit photo
+editphoto before require
+editphoto after require
+editphoto after new obj
+editphoto after edit photo
+editphoto before require
+editphoto after require
+editphoto after new obj
+editphoto after edit photo
+editphoto before require
+editphoto after require
+editphoto after new obj
+editphoto after edit photo
+editphoto before require
+editphoto after require
+editphoto after new obj
+editphoto after edit photo
+references.php->-1
+references.php->0
+references.php->1
+references.php->2
+references.php->3
+02.06.17 14:13:02 pageSettingsModel->update() 
+02.09.17 14:03:56 pageSettingsModel->update() 
+02.09.17 14:07:16 pageSettingsModel->update() 
+02.09.17 14:07:59 pageSettingsModel->update() 
+02.09.17 14:08:03 pageSettingsModel->update() 
+02.09.17 14:10:27 pageSettingsModel->update() 
+02.09.17 14:10:56 pageSettingsModel->update() 
+02.09.17 14:11:21 pageSettingsModel->update() 
+02.09.17 14:12:22 pageSettingsModel->update() 
+02.09.17 16:31:33 pageSettingsModel->update() 
+02.09.17 16:31:49 pageSettingsModel->update() 
+02.09.17 16:33:19 pageSettingsModel->update() 
+02.09.17 16:34:07 pageSettingsModel->update() 
+02.09.17 16:34:32 pageSettingsModel->update() 
+02.09.17 16:34:49 pageSettingsModel->update() 
+02.09.17 16:35:32 pageSettingsModel->update() 
+02.09.17 16:36:03 pageSettingsModel->update() 
+02.09.17 16:39:05 pageSettingsModel->update() 
+02.09.17 16:40:18 pageSettingsModel->update() 
+02.09.17 16:41:35 pageSettingsModel->update() 
+02.09.17 16:41:58 pageSettingsModel->update() 
+02.09.17 16:44:53 pageSettingsModel->update() 
+02.09.17 16:45:15 pageSettingsModel->update() 
+02.09.17 16:52:54 pageSettingsModel->update() 
+02.09.17 16:53:24 pageSettingsModel->update() 
+02.09.17 17:00:30 pageSettingsModel->update() 
+02.09.17 17:00:43 pageSettingsModel->update() 
+02.09.17 17:03:19 pageText ->>> <p>HAKKIMIZDA</p><p>Retto Mobilya 1999 yılından bu yana klasik mobilya denildiğinde akla gelen ilk markalar arasında yer alan bir kuruluştur.
+Tüm ahşap işlerine farklı tasarımlarıyla, profesyonel ve titiz ekibiyle hizmet vermektedir.
+Retto Mobilya, Toplam Kalite Yönetimi’ni ve Kaizen Felsefesi’ni benimsemiş olup tedarikçilerden üretime, montaj işleminden satış sonrası hizmete kadar tüm aşamalarda kalite ve kontrolden taviz vermemektedir.
+Özgün tasarımları, çalışma disiplini, farklı dizaynları; en yeni cila ve en yeni kumaşlarla, en iyi ahşap seçimleri ile mobilya konusunda aranan ve en çok tercih edilen isim olmuştur. Zerafet, tarz, trend, konfor, saygınlık, kalite ve satış sonrası memnuniyet ilkeleri ile çalışan, Retto Mobilya hizmet ve ürün çizgisini hiç bozmadan sektördeki kalıcılığını ve bilinirliliğini sağlamlaştırmıştır.
+Klasik tarzdaki yemek odası, yatak odası ve koluk tasarımları ile toptan ürün pazarında da adından sıklıkla söz ettiren  Retto Mobilya, imalat çizgisindeki sofistike yaklaşımları ile sektörün öncüleri arasında yer alır. Mobilya sanatının temsilcilerinden olan Retto Mobilya, ahşap işleme sanatına duyduğu aşk ile ürettiği birbirinden güzel modelleri, ince işçilik, özgün tasarımları ve benzersiz çalışmaları ile adını mobilya sektörüne yazdırmıştır. Retto Mobilya markası geçmişten bugüne çizgisini bozmadan, sektördeki yerini her geçen gün daha da kalıcı hale getirmekte ve mobilya konusunda modayı belirleyen öncü marka olma yolunda ilerlemektedir...
+Gerek tasarım, gerekse uygulamadaki ayrıntılar bizi biz yapan unsurlardır...</p><p>VİZYONUMUZ</p><p>
+
+Sektörün,  bizleri bekleyen teknolojik ve insan faktörlü dalgalanmaların bilincinde olarak değerlerimizi ve mamül-yarı mamül kaynaklarımızı değişimlere en çabuk ve en verimli şekilde adapte edebilmek, hedefimizi korumak şartı ile kazanılmış itibarı ve saygınlığı pekiştirerek hedef kitlemizi genişletmek ve pazarda lider konuma ulaşmak.
+
+</p><p>MİSYONUMUZ</p><p>
+
+Çalışanlarımızın ve tedarikçilerimizin daimi desteği ile Ekonomik Fiyat ve Toplam Kalite anlayışını siz değerli müşterilerimize yansıtabilmek.
+
+</p><p>HEDEFLERİMİZ</p><p>
+
+  * Müşteri memnuniyeti.
+  * Çalışanların memnuniyeti.
+  * Tedarikçilerin memnuniyeti.
+  * Karlı portföy.
+  * Sürekli ve sürdürülebilir büyüme.
+
+ABOUT US
+
+Retro furniture is among the top brands that come to mind for called classical furniture style since 1999.
+We work at all kinds of woodwork with our professional team at different innovative designs.
+Retto Furniture adopts Total Quality Management and Kaizen philosophy in its value chain starting with suppliers to production and after-sales service and does not compromise on quality control.
+With its original design, work discipline, different designs on newest varnish techniques, newest fabrics and wood material, we have become the preferred wood furniture firm. Elegance, style, trendiness, comfort, and principles of working with quality and after-sales satisfaction, along with service and durability of furniture, Retto has strengthened its product line.
+The classic-style dining room, bedroom and armchairs have made a place in the wholesale product market as well and made us a pioneer of the industry with our sophisticated approach in manufacturing line. Retto, has made a place in the furniture sector with original design models and with its love of woodworking art, fine workmanship, producing original design. Retto Furniture has worked with quality from its past to present and fast becoming a leading brand name in the sector. .
+Our unique designs, as well as production details are the ground on which we stand.
+
+OUR VISION
+
+Being conscious of fluctuations in technology and human factors, we strive to adapt our finished and semi-finished products to rapidly changing trends and to increase our target market without sacrificing from quality , and thereby becoming a leading firm in the market.
+
+OUR MISSION
+
+With the ongoing support of our employees and our suppliers we aim to have economic prices reflecting on Total Quality mentality of ours.
+
+OUR GOALS
+
+* Customer satisfaction.
+* Employee atisfaction..
+* Supplier satisfaction.
+* Profitable portfolio.
+* Continuous and sustainable growth.						</p> 
+02.09.17 17:03:19 pageSettingsModel->update() 
+02.09.17 17:03:48 pageText ->>> <p>HAKKIMIZDA</p><p>Retto Mobilya 1999 yılından bu yana klasik mobilya denildiğinde akla gelen ilk markalar arasında yer alan bir kuruluştur.
+Tüm ahşap işlerine farklı tasarımlarıyla, profesyonel ve titiz ekibiyle hizmet vermektedir.
+Retto Mobilya, Toplam Kalite Yönetimi’ni ve Kaizen Felsefesi’ni benimsemiş olup tedarikçilerden üretime, montaj işleminden satış sonrası hizmete kadar tüm aşamalarda kalite ve kontrolden taviz vermemektedir.
+Özgün tasarımları, çalışma disiplini, farklı dizaynları; en yeni cila ve en yeni kumaşlarla, en iyi ahşap seçimleri ile mobilya konusunda aranan ve en çok tercih edilen isim olmuştur. Zerafet, tarz, trend, konfor, saygınlık, kalite ve satış sonrası memnuniyet ilkeleri ile çalışan, Retto Mobilya hizmet ve ürün çizgisini hiç bozmadan sektördeki kalıcılığını ve bilinirliliğini sağlamlaştırmıştır.
+Klasik tarzdaki yemek odası, yatak odası ve koluk tasarımları ile toptan ürün pazarında da adından sıklıkla söz ettiren  Retto Mobilya, imalat çizgisindeki sofistike yaklaşımları ile sektörün öncüleri arasında yer alır. Mobilya sanatının temsilcilerinden olan Retto Mobilya, ahşap işleme sanatına duyduğu aşk ile ürettiği birbirinden güzel modelleri, ince işçilik, özgün tasarımları ve benzersiz çalışmaları ile adını mobilya sektörüne yazdırmıştır. Retto Mobilya markası geçmişten bugüne çizgisini bozmadan, sektördeki yerini her geçen gün daha da kalıcı hale getirmekte ve mobilya konusunda modayı belirleyen öncü marka olma yolunda ilerlemektedir...
+Gerek tasarım, gerekse uygulamadaki ayrıntılar bizi biz yapan unsurlardır...</p><p>VİZYONUMUZ</p><p>
+
+Sektörün,  bizleri bekleyen teknolojik ve insan faktörlü dalgalanmaların bilincinde olarak değerlerimizi ve mamül-yarı mamül kaynaklarımızı değişimlere en çabuk ve en verimli şekilde adapte edebilmek, hedefimizi korumak şartı ile kazanılmış itibarı ve saygınlığı pekiştirerek hedef kitlemizi genişletmek ve pazarda lider konuma ulaşmak.
+
+</p><p>MİSYONUMUZ</p><p>
+
+Çalışanlarımızın ve tedarikçilerimizin daimi desteği ile Ekonomik Fiyat ve Toplam Kalite anlayışını siz değerli müşterilerimize yansıtabilmek.
+
+</p><p>HEDEFLERİMİZ</p><p>
+
+  * Müşteri memnuniyeti.
+  * Çalışanların memnuniyeti.
+  * Tedarikçilerin memnuniyeti.
+  * Karlı portföy.
+  * Sürekli ve sürdürülebilir büyüme.
+
+ABOUT US
+
+Retro furniture is among the top brands that come to mind for called classical furniture style since 1999.
+We work at all kinds of woodwork with our professional team at different innovative designs.
+Retto Furniture adopts Total Quality Management and Kaizen philosophy in its value chain starting with suppliers to production and after-sales service and does not compromise on quality control.
+With its original design, work discipline, different designs on newest varnish techniques, newest fabrics and wood material, we have become the preferred wood furniture firm. Elegance, style, trendiness, comfort, and principles of working with quality and after-sales satisfaction, along with service and durability of furniture, Retto has strengthened its product line.
+The classic-style dining room, bedroom and armchairs have made a place in the wholesale product market as well and made us a pioneer of the industry with our sophisticated approach in manufacturing line. Retto, has made a place in the furniture sector with original design models and with its love of woodworking art, fine workmanship, producing original design. Retto Furniture has worked with quality from its past to present and fast becoming a leading brand name in the sector. .
+Our unique designs, as well as production details are the ground on which we stand.
+
+OUR VISION
+
+Being conscious of fluctuations in technology and human factors, we strive to adapt our finished and semi-finished products to rapidly changing trends and to increase our target market without sacrificing from quality , and thereby becoming a leading firm in the market.
+
+OUR MISSION
+
+With the ongoing support of our employees and our suppliers we aim to have economic prices reflecting on Total Quality mentality of ours.</p><div><br /></div><div><br /></div><div><br /></div><div>&nbsp;OUR GOALS
+
+* Customer satisfaction.
+* Employee atisfaction..
+* Supplier satisfaction.
+* Profitable portfolio.
+* Continuous and sustainable growth.						</div> 
+02.09.17 17:03:48 pageSettingsModel->update() 
+02.09.17 17:04:26 pageText ->>> <p>HAKKIMIZDA</p><p>Retto Mobilya 1999 yılından bu yana klasik mobilya denildiğinde akla gelen ilk markalar arasında yer alan bir kuruluştur.
+Tüm ahşap işlerine farklı tasarımlarıyla, profesyonel ve titiz ekibiyle hizmet vermektedir.
+Retto Mobilya, Toplam Kalite Yönetimi’ni ve Kaizen Felsefesi’ni benimsemiş olup tedarikçilerden üretime, montaj işleminden satış sonrası hizmete kadar tüm aşamalarda kalite ve kontrolden taviz vermemektedir.
+Özgün tasarımları, çalışma disiplini, farklı dizaynları; en yeni cila ve en yeni kumaşlarla, en iyi ahşap seçimleri ile mobilya konusunda aranan ve en çok tercih edilen isim olmuştur. Zerafet, tarz, trend, konfor, saygınlık, kalite ve satış sonrası memnuniyet ilkeleri ile çalışan, Retto Mobilya hizmet ve ürün çizgisini hiç bozmadan sektördeki kalıcılığını ve bilinirliliğini sağlamlaştırmıştır.
+Klasik tarzdaki yemek odası, yatak odası ve koluk tasarımları ile toptan ürün pazarında da adından sıklıkla söz ettiren  Retto Mobilya, imalat çizgisindeki sofistike yaklaşımları ile sektörün öncüleri arasında yer alır. Mobilya sanatının temsilcilerinden olan Retto Mobilya, ahşap işleme sanatına duyduğu aşk ile ürettiği birbirinden güzel modelleri, ince işçilik, özgün tasarımları ve benzersiz çalışmaları ile adını mobilya sektörüne yazdırmıştır. Retto Mobilya markası geçmişten bugüne çizgisini bozmadan, sektördeki yerini her geçen gün daha da kalıcı hale getirmekte ve mobilya konusunda modayı belirleyen öncü marka olma yolunda ilerlemektedir...
+Gerek tasarım, gerekse uygulamadaki ayrıntılar bizi biz yapan unsurlardır...</p><p>VİZYONUMUZ</p><p>
+
+Sektörün,  bizleri bekleyen teknolojik ve insan faktörlü dalgalanmaların bilincinde olarak değerlerimizi ve mamül-yarı mamül kaynaklarımızı değişimlere en çabuk ve en verimli şekilde adapte edebilmek, hedefimizi korumak şartı ile kazanılmış itibarı ve saygınlığı pekiştirerek hedef kitlemizi genişletmek ve pazarda lider konuma ulaşmak.
+
+</p><p>MİSYONUMUZ</p><p>
+
+Çalışanlarımızın ve tedarikçilerimizin daimi desteği ile Ekonomik Fiyat ve Toplam Kalite anlayışını siz değerli müşterilerimize yansıtabilmek.
+
+</p><p>HEDEFLERİMİZ</p><p>
+
+  * Müşteri memnuniyeti.
+  * Çalışanların memnuniyeti.
+  * Tedarikçilerin memnuniyeti.
+  * Karlı portföy.
+  * Sürekli ve sürdürülebilir büyüme.
+
+ABOUT US
+
+Retro furniture is among the top brands that come to mind for called classical furniture style since 1999.
+We work at all kinds of woodwork with our professional team at different innovative designs.
+Retto Furniture adopts Total Quality Management and Kaizen philosophy in its value chain starting with suppliers to production and after-sales service and does not compromise on quality control.
+With its original design, work discipline, different designs on newest varnish techniques, newest fabrics and wood material, we have become the preferred wood furniture firm. Elegance, style, trendiness, comfort, and principles of working with quality and after-sales satisfaction, along with service and durability of furniture, Retto has strengthened its product line.
+The classic-style dining room, bedroom and armchairs have made a place in the wholesale product market as well and made us a pioneer of the industry with our sophisticated approach in manufacturing line. Retto, has made a place in the furniture sector with original design models and with its love of woodworking art, fine workmanship, producing original design. Retto Furniture has worked with quality from its past to present and fast becoming a leading brand name in the sector. .
+Our unique designs, as well as production details are the ground on which we stand.
+
+OUR VISION
+
+Being conscious of fluctuations in technology and human factors, we strive to adapt our finished and semi-finished products to rapidly changing trends and to increase our target market without sacrificing from quality , and thereby becoming a leading firm in the market.
+
+OUR MISSION
+
+With the ongoing support of our employees and our suppliers we aim to have economic prices reflecting on Total Quality mentality of ours.</p><p>OUR GOALS</p><p>&nbsp;* Customer satisfaction.
+* Employee atisfaction..
+* Supplier satisfaction.
+* Profitable portfolio.
+* Continuous and sustainable growth.						</p> 
+02.09.17 17:04:26 pageSettingsModel->update() 
+02.09.17 17:05:31 pageText ->>> <p>HAKKIMIZDA</p><p>Retto Mobilya 1999 yılından bu yana klasik mobilya denildiğinde akla gelen ilk markalar arasında yer alan bir kuruluştur.
+Tüm ahşap işlerine farklı tasarımlarıyla, profesyonel ve titiz ekibiyle hizmet vermektedir.
+Retto Mobilya, Toplam Kalite Yönetimi’ni ve Kaizen Felsefesi’ni benimsemiş olup tedarikçilerden üretime, montaj işleminden satış sonrası hizmete kadar tüm aşamalarda kalite ve kontrolden taviz vermemektedir.
+Özgün tasarımları, çalışma disiplini, farklı dizaynları; en yeni cila ve en yeni kumaşlarla, en iyi ahşap seçimleri ile mobilya konusunda aranan ve en çok tercih edilen isim olmuştur. Zerafet, tarz, trend, konfor, saygınlık, kalite ve satış sonrası memnuniyet ilkeleri ile çalışan, Retto Mobilya hizmet ve ürün çizgisini hiç bozmadan sektördeki kalıcılığını ve bilinirliliğini sağlamlaştırmıştır.
+Klasik tarzdaki yemek odası, yatak odası ve koluk tasarımları ile toptan ürün pazarında da adından sıklıkla söz ettiren  Retto Mobilya, imalat çizgisindeki sofistike yaklaşımları ile sektörün öncüleri arasında yer alır. Mobilya sanatının temsilcilerinden olan Retto Mobilya, ahşap işleme sanatına duyduğu aşk ile ürettiği birbirinden güzel modelleri, ince işçilik, özgün tasarımları ve benzersiz çalışmaları ile adını mobilya sektörüne yazdırmıştır. Retto Mobilya markası geçmişten bugüne çizgisini bozmadan, sektördeki yerini her geçen gün daha da kalıcı hale getirmekte ve mobilya konusunda modayı belirleyen öncü marka olma yolunda ilerlemektedir...
+Gerek tasarım, gerekse uygulamadaki ayrıntılar bizi biz yapan unsurlardır...</p><p>VİZYONUMUZ</p><p>
+
+Sektörün,  bizleri bekleyen teknolojik ve insan faktörlü dalgalanmaların bilincinde olarak değerlerimizi ve mamül-yarı mamül kaynaklarımızı değişimlere en çabuk ve en verimli şekilde adapte edebilmek, hedefimizi korumak şartı ile kazanılmış itibarı ve saygınlığı pekiştirerek hedef kitlemizi genişletmek ve pazarda lider konuma ulaşmak.
+
+</p><p>MİSYONUMUZ</p><p>
+
+Çalışanlarımızın ve tedarikçilerimizin daimi desteği ile Ekonomik Fiyat ve Toplam Kalite anlayışını siz değerli müşterilerimize yansıtabilmek.
+
+</p><p>HEDEFLERİMİZ</p><p>
+
+  * Müşteri memnuniyeti.
+  * Çalışanların memnuniyeti.
+  * Tedarikçilerin memnuniyeti.
+  * Karlı portföy.
+  * Sürekli ve sürdürülebilir büyüme.
+
+ABOUT US
+
+Retro furniture is among the top brands that come to mind for called classical furniture style since 1999.
+We work at all kinds of woodwork with our professional team at different innovative designs.
+Retto Furniture adopts Total Quality Management and Kaizen philosophy in its value chain starting with suppliers to production and after-sales service and does not compromise on quality control.
+With its original design, work discipline, different designs on newest varnish techniques, newest fabrics and wood material, we have become the preferred wood furniture firm. Elegance, style, trendiness, comfort, and principles of working with quality and after-sales satisfaction, along with service and durability of furniture, Retto has strengthened its product line.
+The classic-style dining room, bedroom and armchairs have made a place in the wholesale product market as well and made us a pioneer of the industry with our sophisticated approach in manufacturing line. Retto, has made a place in the furniture sector with original design models and with its love of woodworking art, fine workmanship, producing original design. Retto Furniture has worked with quality from its past to present and fast becoming a leading brand name in the sector. .
+Our unique designs, as well as production details are the ground on which we stand.
+
+OUR VISION
+
+Being conscious of fluctuations in technology and human factors, we strive to adapt our finished and semi-finished products to rapidly changing trends and to increase our target market without sacrificing from quality , and thereby becoming a leading firm in the market.
+
+OUR MISSION
+
+With the ongoing support of our employees and our suppliers we aim to have economic prices reflecting on Total Quality mentality of ours.
+
+OUR GOALS
+
+* Customer satisfaction.
+* Employee atisfaction..
+* Supplier satisfaction.
+* Profitable portfolio.
+* Continuous and sustainable growth.						</p><div><br /></div><div><br /></div><div>&nbsp;OUR GOALS&nbsp;</div><div><br /></div><div>*Customer satisfaction.</div><div>*Employee satisfaction</div><div>*Supplier satisfaction</div> 
+02.09.17 17:05:31 pageSettingsModel->update() 
+02.09.17 17:06:06 pageText ->>> <p>a</p> 
+02.09.17 17:06:06 pageSettingsModel->update() 
+02.09.17 17:10:24 pageSettingsModel->update() 
+2about../uploads/logo.gifT�rkiye'ninnavbar-1slider-2footer-1descriptionkeywords<p>ddd</p>02.09.17 17:12:00 pageSettingsModel->update() 
+2about../uploads/logo.gifT�rkiye'ninnavbar-1slider-2footer-1descriptionkeywords<p>HAKKIMIZDA</p><p>Retto Mobilya 1999 yılından bu yana klasik mobilya denildiğinde akla gelen ilk markalar arasında yer alan bir kuruluştur.
+Tüm ahşap işlerine farklı tasarımlarıyla, profesyonel ve titiz ekibiyle hizmet vermektedir.
+Retto Mobilya, Toplam Kalite Yönetimi’ni ve Kaizen Felsefesi’ni benimsemiş olup tedarikçilerden üretime, montaj işleminden satış sonrası hizmete kadar tüm aşamalarda kalite ve kontrolden taviz vermemektedir.
+Özgün tasarımları, çalışma disiplini, farklı dizaynları; en yeni cila ve en yeni kumaşlarla, en iyi ahşap seçimleri ile mobilya konusunda aranan ve en çok tercih edilen isim olmuştur. Zerafet, tarz, trend, konfor, saygınlık, kalite ve satış sonrası memnuniyet ilkeleri ile çalışan, Retto Mobilya hizmet ve ürün çizgisini hiç bozmadan sektördeki kalıcılığını ve bilinirliliğini sağlamlaştırmıştır.
+Klasik tarzdaki yemek odası, yatak odası ve koluk tasarımları ile toptan ürün pazarında da adından sıklıkla söz ettiren  Retto Mobilya, imalat çizgisindeki sofistike yaklaşımları ile sektörün öncüleri arasında yer alır. Mobilya sanatının temsilcilerinden olan Retto Mobilya, ahşap işleme sanatına duyduğu aşk ile ürettiği birbirinden güzel modelleri, ince işçilik, özgün tasarımları ve benzersiz çalışmaları ile adını mobilya sektörüne yazdırmıştır. Retto Mobilya markası geçmişten bugüne çizgisini bozmadan, sektördeki yerini her geçen gün daha da kalıcı hale getirmekte ve mobilya konusunda modayı belirleyen öncü marka olma yolunda ilerlemektedir...
+Gerek tasarım, gerekse uygulamadaki ayrıntılar bizi biz yapan unsurlardır...</p><p>VİZYONUMUZ</p><p>
+
+Sektörün,  bizleri bekleyen teknolojik ve insan faktörlü dalgalanmaların bilincinde olarak değerlerimizi ve mamül-yarı mamül kaynaklarımızı değişimlere en çabuk ve en verimli şekilde adapte edebilmek, hedefimizi korumak şartı ile kazanılmış itibarı ve saygınlığı pekiştirerek hedef kitlemizi genişletmek ve pazarda lider konuma ulaşmak.
+
+</p><p>MİSYONUMUZ</p><p>
+
+Çalışanlarımızın ve tedarikçilerimizin daimi desteği ile Ekonomik Fiyat ve Toplam Kalite anlayışını siz değerli müşterilerimize yansıtabilmek.
+
+</p><p>HEDEFLERİMİZ</p><p>
+
+  * Müşteri memnuniyeti.
+  * Çalışanların memnuniyeti.
+  * Tedarikçilerin memnuniyeti.
+  * Karlı portföy.
+  * Sürekli ve sürdürülebilir büyüme.
+
+ABOUT US
+
+Retro furniture is among the top brands that come to mind for called classical furniture style since 1999.
+We work at all kinds of woodwork with our professional team at different innovative designs.
+Retto Furniture adopts Total Quality Management and Kaizen philosophy in its value chain starting with suppliers to production and after-sales service and does not compromise on quality control.
+With its original design, work discipline, different designs on newest varnish techniques, newest fabrics and wood material, we have become the preferred wood furniture firm. Elegance, style, trendiness, comfort, and principles of working with quality and after-sales satisfaction, along with service and durability of furniture, Retto has strengthened its product line.
+The classic-style dining room, bedroom and armchairs have made a place in the wholesale product market as well and made us a pioneer of the industry with our sophisticated approach in manufacturing line. Retto, has made a place in the furniture sector with original design models and with its love of woodworking art, fine workmanship, producing original design. Retto Furniture has worked with quality from its past to present and fast becoming a leading brand name in the sector. .
+Our unique designs, as well as production details are the ground on which we stand.
+
+OUR VISION
+
+Being conscious of fluctuations in technology and human factors, we strive to adapt our finished and semi-finished products to rapidly changing trends and to increase our target market without sacrificing from quality , and thereby becoming a leading firm in the market.
+
+OUR MISSION
+
+With the ongoing support of our employees and our suppliers we aim to have economic prices reflecting on Total Quality mentality of ours.
+
+OUR GOALS
+
+* Customer satisfaction.
+* Employee atisfaction..
+* Supplier satisfaction.
+* Profitable portfolio.
+* Continuous and sustainable growth.						</p>02.09.17 17:13:04 pageSettingsModel->update() exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nin', navbar='navbar-1', navbar_color='', navbar_opacity='', slider='slider-2', ' at line 1' in C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php:130
+Stack trace:
+#0 C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php(130): PDOStatement->execute()
+#1 C:\xampp\htdocs\adminPanelMvc\Controller\admin\pageSettingsController.php(70): PageModel->update(Array)
+#2 C:\xampp\htdocs\adminPanelMvc\View\pages\settings\aboutPageSettings.php(19): PageSettingsController->update(Array)
+#3 C:\xampp\htdocs\adminPanelMvc\Controller\settingsController.php(18): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\adminPanelMvc\Controller\pagesController.php(10): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\adminPanelMvc\routes.php(21): PagesController->settings()
+#6 C:\xampp\htdocs\adminPanelMvc\routes.php(41): call('pages', 'settings')
+#7 C:\xampp\htdocs\adminPanelMvc\View\layout.php(10): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\adminPanelMvc\index.php(15): require_once('C:\\xampp\\htdocs...')
+#9 {main} 
+2about../uploads/logo.gifT�rkiye'ninnavbar-1slider-2footer-1descriptionkeywords<p>HAKKIMIZDA</p><p>Retto Mobilya 1999 yılından bu yana klasik mobilya denildiğinde akla gelen ilk markalar arasında yer alan bir kuruluştur.
+Tüm ahşap işlerine farklı tasarımlarıyla, profesyonel ve titiz ekibiyle hizmet vermektedir.
+Retto Mobilya, Toplam Kalite Yönetimi’ni ve Kaizen Felsefesi’ni benimsemiş olup tedarikçilerden üretime, montaj işleminden satış sonrası hizmete kadar tüm aşamalarda kalite ve kontrolden taviz vermemektedir.
+Özgün tasarımları, çalışma disiplini, farklı dizaynları; en yeni cila ve en yeni kumaşlarla, en iyi ahşap seçimleri ile mobilya konusunda aranan ve en çok tercih edilen isim olmuştur. Zerafet, tarz, trend, konfor, saygınlık, kalite ve satış sonrası memnuniyet ilkeleri ile çalışan, Retto Mobilya hizmet ve ürün çizgisini hiç bozmadan sektördeki kalıcılığını ve bilinirliliğini sağlamlaştırmıştır.
+Klasik tarzdaki yemek odası, yatak odası ve koluk tasarımları ile toptan ürün pazarında da adından sıklıkla söz ettiren  Retto Mobilya, imalat çizgisindeki sofistike yaklaşımları ile sektörün öncüleri arasında yer alır. Mobilya sanatının temsilcilerinden olan Retto Mobilya, ahşap işleme sanatına duyduğu aşk ile ürettiği birbirinden güzel modelleri, ince işçilik, özgün tasarımları ve benzersiz çalışmaları ile adını mobilya sektörüne yazdırmıştır. Retto Mobilya markası geçmişten bugüne çizgisini bozmadan, sektördeki yerini her geçen gün daha da kalıcı hale getirmekte ve mobilya konusunda modayı belirleyen öncü marka olma yolunda ilerlemektedir...
+Gerek tasarım, gerekse uygulamadaki ayrıntılar bizi biz yapan unsurlardır...</p><p>VİZYONUMUZ</p><p>
+
+Sektörün,  bizleri bekleyen teknolojik ve insan faktörlü dalgalanmaların bilincinde olarak değerlerimizi ve mamül-yarı mamül kaynaklarımızı değişimlere en çabuk ve en verimli şekilde adapte edebilmek, hedefimizi korumak şartı ile kazanılmış itibarı ve saygınlığı pekiştirerek hedef kitlemizi genişletmek ve pazarda lider konuma ulaşmak.
+
+</p><p>MİSYONUMUZ</p><p>
+
+Çalışanlarımızın ve tedarikçilerimizin daimi desteği ile Ekonomik Fiyat ve Toplam Kalite anlayışını siz değerli müşterilerimize yansıtabilmek.
+
+</p><p>HEDEFLERİMİZ</p><p>
+
+  * Müşteri memnuniyeti.
+  * Çalışanların memnuniyeti.
+  * Tedarikçilerin memnuniyeti.
+  * Karlı portföy.
+  * Sürekli ve sürdürülebilir büyüme.
+
+ABOUT US
+
+Retro furniture is among the top brands that come to mind for called classical furniture style since 1999.
+We work at all kinds of woodwork with our professional team at different innovative designs.
+Retto Furniture adopts Total Quality Management and Kaizen philosophy in its value chain starting with suppliers to production and after-sales service and does not compromise on quality control.
+With its original design, work discipline, different designs on newest varnish techniques, newest fabrics and wood material, we have become the preferred wood furniture firm. Elegance, style, trendiness, comfort, and principles of working with quality and after-sales satisfaction, along with service and durability of furniture, Retto has strengthened its product line.
+The classic-style dining room, bedroom and armchairs have made a place in the wholesale product market as well and made us a pioneer of the industry with our sophisticated approach in manufacturing line. Retto, has made a place in the furniture sector with original design models and with its love of woodworking art, fine workmanship, producing original design. Retto Furniture has worked with quality from its past to present and fast becoming a leading brand name in the sector. .
+Our unique designs, as well as production details are the ground on which we stand.
+
+OUR VISION
+
+Being conscious of fluctuations in technology and human factors, we strive to adapt our finished and semi-finished products to rapidly changing trends and to increase our target market without sacrificing from quality , and thereby becoming a leading firm in the market.
+
+OUR MISSION
+
+With the ongoing support of our employees and our suppliers we aim to have economic prices reflecting on Total Quality mentality of ours.
+
+OUR GOALS
+
+* Customer satisfaction.
+* Employee atisfaction..
+* Supplier satisfaction.
+* Profitable portfolio.
+* Continuous and sustainable growth.						</p>02.09.17 17:13:06 pageSettingsModel->update() exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nin', navbar='navbar-1', navbar_color='', navbar_opacity='', slider='slider-2', ' at line 1' in C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php:130
+Stack trace:
+#0 C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php(130): PDOStatement->execute()
+#1 C:\xampp\htdocs\adminPanelMvc\Controller\admin\pageSettingsController.php(70): PageModel->update(Array)
+#2 C:\xampp\htdocs\adminPanelMvc\View\pages\settings\aboutPageSettings.php(19): PageSettingsController->update(Array)
+#3 C:\xampp\htdocs\adminPanelMvc\Controller\settingsController.php(18): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\adminPanelMvc\Controller\pagesController.php(10): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\adminPanelMvc\routes.php(21): PagesController->settings()
+#6 C:\xampp\htdocs\adminPanelMvc\routes.php(41): call('pages', 'settings')
+#7 C:\xampp\htdocs\adminPanelMvc\View\layout.php(10): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\adminPanelMvc\index.php(15): require_once('C:\\xampp\\htdocs...')
+#9 {main} 
+2about../uploads/logo.gifT�rkiye'ninnavbar-1slider-2footer-1descriptionkeywordsa02.09.17 17:21:35 pageSettingsModel->update() exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nin', navbar='navbar-1', navbar_color='', navbar_opacity='', slider='slider-2', ' at line 1' in C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php:130
+Stack trace:
+#0 C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php(130): PDOStatement->execute()
+#1 C:\xampp\htdocs\adminPanelMvc\Controller\admin\pageSettingsController.php(70): PageModel->update(Array)
+#2 C:\xampp\htdocs\adminPanelMvc\View\pages\settings\aboutPageSettings.php(20): PageSettingsController->update(Array)
+#3 C:\xampp\htdocs\adminPanelMvc\Controller\settingsController.php(18): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\adminPanelMvc\Controller\pagesController.php(10): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\adminPanelMvc\routes.php(21): PagesController->settings()
+#6 C:\xampp\htdocs\adminPanelMvc\routes.php(41): call('pages', 'settings')
+#7 C:\xampp\htdocs\adminPanelMvc\View\layout.php(10): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\adminPanelMvc\index.php(15): require_once('C:\\xampp\\htdocs...')
+#9 {main} 
+2about../uploads/logo.gifanavbar-1slider-2footer-1descriptionkeywords<p>HAKKIMIZDA</p>
+
+<p>Retto Mobilya 1999 yılından bu yana klasik mobilya denildiğinde akla gelen ilk markalar arasında yer alan bir kuruluştur.
+Tüm ahşap işlerine farklı tasarımlarıyla, profesyonel ve titiz ekibiyle hizmet vermektedir.
+Retto Mobilya, Toplam Kalite Yönetimi’ni ve Kaizen Felsefesi’ni benimsemiş olup tedarikçilerden üretime, montaj işleminden satış sonrası hizmete kadar tüm aşamalarda kalite ve kontrolden taviz vermemektedir.
+Özgün tasarımları, çalışma disiplini, farklı dizaynları; en yeni cila ve en yeni kumaşlarla, en iyi ahşap seçimleri ile mobilya konusunda aranan ve en çok tercih edilen isim olmuştur. Zerafet, tarz, trend, konfor, saygınlık, kalite ve satış sonrası memnuniyet ilkeleri ile çalışan, Retto Mobilya hizmet ve ürün çizgisini hiç bozmadan sektördeki kalıcılığını ve bilinirliliğini sağlamlaştırmıştır.
+Klasik tarzdaki yemek odası, yatak odası ve koluk tasarımları ile toptan ürün pazarında da adından sıklıkla söz ettiren  Retto Mobilya, imalat çizgisindeki sofistike yaklaşımları ile sektörün öncüleri arasında yer alır. Mobilya sanatının temsilcilerinden olan Retto Mobilya, ahşap işleme sanatına duyduğu aşk ile ürettiği birbirinden güzel modelleri, ince işçilik, özgün tasarımları ve benzersiz çalışmaları ile adını mobilya sektörüne yazdırmıştır. Retto Mobilya markası geçmişten bugüne çizgisini bozmadan, sektördeki yerini her geçen gün daha da kalıcı hale getirmekte ve mobilya konusunda modayı belirleyen öncü marka olma yolunda ilerlemektedir...
+Gerek tasarım, gerekse uygulamadaki ayrıntılar bizi biz yapan unsurlardır...</p>
+
+<p>VİZYONUMUZ</p>
+
+Sektörün,  bizleri bekleyen teknolojik ve insan faktörlü dalgalanmaların bilincinde olarak değerlerimizi ve mamül-yarı mamül kaynaklarımızı değişimlere en çabuk ve en verimli şekilde adapte edebilmek, hedefimizi korumak şartı ile kazanılmış itibarı ve saygınlığı pekiştirerek hedef kitlemizi genişletmek ve pazarda lider konuma ulaşmak.
+
+<p>MİSYONUMUZ</p>
+
+Çalışanlarımızın ve tedarikçilerimizin daimi desteği ile Ekonomik Fiyat ve Toplam Kalite anlayışını siz değerli müşterilerimize yansıtabilmek.
+
+<p>HEDEFLERİMİZ</p>
+
+  * Müşteri memnuniyeti.
+  * Çalışanların memnuniyeti.
+  * Tedarikçilerin memnuniyeti.
+  * Karlı portföy.
+  * Sürekli ve sürdürülebilir büyüme.
+
+ABOUT US
+
+Retro furniture is among the top brands that come to mind for called classical furniture style since 1999.
+We work at all kinds of woodwork with our professional team at different innovative designs.
+Retto Furniture adopts Total Quality Management and Kaizen philosophy in its value chain starting with suppliers to production and after-sales service and does not compromise on quality control.
+With its original design, work discipline, different designs on newest varnish techniques, newest fabrics and wood material, we have become the preferred wood furniture firm. Elegance, style, trendiness, comfort, and principles of working with quality and after-sales satisfaction, along with service and durability of furniture, Retto has strengthened its product line.
+The classic-style dining room, bedroom and armchairs have made a place in the wholesale product market as well and made us a pioneer of the industry with our sophisticated approach in manufacturing line. Retto, has made a place in the furniture sector with original design models and with its love of woodworking art, fine workmanship, producing original design. Retto Furniture has worked with quality from its past to present and fast becoming a leading brand name in the sector. .
+Our unique designs, as well as production details are the ground on which we stand.
+
+OUR VISION
+
+Being conscious of fluctuations in technology and human factors, we strive to adapt our finished and semi-finished products to rapidly changing trends and to increase our target market without sacrificing from quality , and thereby becoming a leading firm in the market.
+
+OUR MISSION
+
+With the ongoing support of our employees and our suppliers we aim to have economic prices reflecting on Total Quality mentality of ours.
+
+OUR GOALS
+
+* Customer satisfaction.
+* Employee atisfaction..
+* Supplier satisfaction.
+* Profitable portfolio.
+* Continuous and sustainable growth.2about../uploads/logo.gifanavbar-1slider-2footer-1descriptionkeywordsd2about../uploads/logo.gifanavbar-1slider-2footer-1descriptionkeywords<p>				asdfasd</p><div>sadf</div><div>asd</div><div>fasd</div><div><br /></div><div><br /></div><div><br /></div><div>asdfasdfas</div><div>f</div><div>asdf</div><div>asdf</div><div>asd</div><div>fas</div><div>dfa</div><div>dsf</div><div>ads</div><div>f</div><div><br /></div>02.09.17 23:06:26 pageSettingsModel->update() exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nin', navbar='navbar-1', navbar_color='', navbar_opacity='', slider='slider-2', ' at line 1' in C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php:135
+Stack trace:
+#0 C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php(135): PDOStatement->execute()
+#1 C:\xampp\htdocs\adminPanelMvc\Controller\admin\pageSettingsController.php(71): PageModel->update(Array)
+#2 C:\xampp\htdocs\adminPanelMvc\View\pages\settings\aboutPageSettings.php(20): PageSettingsController->update(Array)
+#3 C:\xampp\htdocs\adminPanelMvc\Controller\settingsController.php(18): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\adminPanelMvc\Controller\pagesController.php(10): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\adminPanelMvc\routes.php(21): PagesController->settings()
+#6 C:\xampp\htdocs\adminPanelMvc\routes.php(41): call('pages', 'settings')
+#7 C:\xampp\htdocs\adminPanelMvc\View\layout.php(10): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\adminPanelMvc\index.php(15): require_once('C:\\xampp\\htdocs...')
+#9 {main} 
+02.09.17 23:09:05 pageSettingsModel->update() exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nin', navbar='navbar-1', navbar_color='', navbar_opacity='', slider='slider-2', ' at line 1' in C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php:135
+Stack trace:
+#0 C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php(135): PDOStatement->execute()
+#1 C:\xampp\htdocs\adminPanelMvc\Controller\admin\pageSettingsController.php(71): PageModel->update(Array)
+#2 C:\xampp\htdocs\adminPanelMvc\View\pages\settings\aboutPageSettings.php(20): PageSettingsController->update(Array)
+#3 C:\xampp\htdocs\adminPanelMvc\Controller\settingsController.php(18): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\adminPanelMvc\Controller\pagesController.php(10): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\adminPanelMvc\routes.php(21): PagesController->settings()
+#6 C:\xampp\htdocs\adminPanelMvc\routes.php(41): call('pages', 'settings')
+#7 C:\xampp\htdocs\adminPanelMvc\View\layout.php(10): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\adminPanelMvc\index.php(15): require_once('C:\\xampp\\htdocs...')
+#9 {main} 
+02.09.17 23:09:14 pageSettingsModel->update() exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nin', navbar='navbar-1', navbar_color='', navbar_opacity='', slider='slider-2', ' at line 1' in C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php:135
+Stack trace:
+#0 C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php(135): PDOStatement->execute()
+#1 C:\xampp\htdocs\adminPanelMvc\Controller\admin\pageSettingsController.php(71): PageModel->update(Array)
+#2 C:\xampp\htdocs\adminPanelMvc\View\pages\settings\aboutPageSettings.php(20): PageSettingsController->update(Array)
+#3 C:\xampp\htdocs\adminPanelMvc\Controller\settingsController.php(18): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\adminPanelMvc\Controller\pagesController.php(10): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\adminPanelMvc\routes.php(21): PagesController->settings()
+#6 C:\xampp\htdocs\adminPanelMvc\routes.php(41): call('pages', 'settings')
+#7 C:\xampp\htdocs\adminPanelMvc\View\layout.php(10): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\adminPanelMvc\index.php(15): require_once('C:\\xampp\\htdocs...')
+#9 {main} 
+02.09.17 23:10:07 pageSettingsModel->update() exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nin', navbar='navbar-1', navbar_color='', navbar_opacity='', slider='slider-2', ' at line 1' in C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php:135
+Stack trace:
+#0 C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php(135): PDOStatement->execute()
+#1 C:\xampp\htdocs\adminPanelMvc\Controller\admin\pageSettingsController.php(71): PageModel->update(Array)
+#2 C:\xampp\htdocs\adminPanelMvc\View\pages\settings\aboutPageSettings.php(20): PageSettingsController->update(Array)
+#3 C:\xampp\htdocs\adminPanelMvc\Controller\settingsController.php(18): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\adminPanelMvc\Controller\pagesController.php(10): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\adminPanelMvc\routes.php(21): PagesController->settings()
+#6 C:\xampp\htdocs\adminPanelMvc\routes.php(41): call('pages', 'settings')
+#7 C:\xampp\htdocs\adminPanelMvc\View\layout.php(10): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\adminPanelMvc\index.php(15): require_once('C:\\xampp\\htdocs...')
+#9 {main} 
+02.09.17 23:11:25 pageSettingsModel->update() exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nin', navbar='navbar-1', navbar_color='', navbar_opacity='', slider='slider-2', ' at line 1' in C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php:135
+Stack trace:
+#0 C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php(135): PDOStatement->execute()
+#1 C:\xampp\htdocs\adminPanelMvc\Controller\admin\pageSettingsController.php(71): PageModel->update(Array)
+#2 C:\xampp\htdocs\adminPanelMvc\View\pages\settings\aboutPageSettings.php(20): PageSettingsController->update(Array)
+#3 C:\xampp\htdocs\adminPanelMvc\Controller\settingsController.php(18): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\adminPanelMvc\Controller\pagesController.php(10): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\adminPanelMvc\routes.php(21): PagesController->settings()
+#6 C:\xampp\htdocs\adminPanelMvc\routes.php(41): call('pages', 'settings')
+#7 C:\xampp\htdocs\adminPanelMvc\View\layout.php(10): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\adminPanelMvc\index.php(15): require_once('C:\\xampp\\htdocs...')
+#9 {main} 
+02.09.17 23:12:23 pageSettingsModel->update() exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nin', navbar='navbar-1', navbar_color='', navbar_opacity='', slider='slider-2', ' at line 1' in C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php:135
+Stack trace:
+#0 C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php(135): PDOStatement->execute()
+#1 C:\xampp\htdocs\adminPanelMvc\Controller\admin\pageSettingsController.php(71): PageModel->update(Array)
+#2 C:\xampp\htdocs\adminPanelMvc\View\pages\settings\aboutPageSettings.php(20): PageSettingsController->update(Array)
+#3 C:\xampp\htdocs\adminPanelMvc\Controller\settingsController.php(18): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\adminPanelMvc\Controller\pagesController.php(10): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\adminPanelMvc\routes.php(21): PagesController->settings()
+#6 C:\xampp\htdocs\adminPanelMvc\routes.php(41): call('pages', 'settings')
+#7 C:\xampp\htdocs\adminPanelMvc\View\layout.php(10): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\adminPanelMvc\index.php(15): require_once('C:\\xampp\\htdocs...')
+#9 {main} 
+02.09.17 23:12:33 pageSettingsModel->update() exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nin', navbar='navbar-1', navbar_color='', navbar_opacity='', slider='slider-2', ' at line 1' in C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php:135
+Stack trace:
+#0 C:\xampp\htdocs\adminPanelMvc\Model\pageSettingsModel.php(135): PDOStatement->execute()
+#1 C:\xampp\htdocs\adminPanelMvc\Controller\admin\pageSettingsController.php(71): PageModel->update(Array)
+#2 C:\xampp\htdocs\adminPanelMvc\View\pages\settings\aboutPageSettings.php(20): PageSettingsController->update(Array)
+#3 C:\xampp\htdocs\adminPanelMvc\Controller\settingsController.php(18): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\adminPanelMvc\Controller\pagesController.php(10): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\adminPanelMvc\routes.php(21): PagesController->settings()
+#6 C:\xampp\htdocs\adminPanelMvc\routes.php(41): call('pages', 'settings')
+#7 C:\xampp\htdocs\adminPanelMvc\View\layout.php(10): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\adminPanelMvc\index.php(15): require_once('C:\\xampp\\htdocs...')
+#9 {main} 
+02.11.17 13:38:04 adminModel->check() 
+02.11.17 13:38:27 adminModel->check() 
+02.11.17 13:39:13 adminModel->check() 
+02.11.17 13:40:04 connection->getInstance() 
+02.11.17 13:41:36 connection->getInstance() 
+02.11.17 13:42:29 connection->getInstance() 
+02.11.17 13:42:37 connection->getInstance() 
+02.11.17 13:42:42 connection->getInstance() 
+02.11.17 13:43:28 connection->getInstance() 
+02.11.17 13:44:53 connection->getInstance() 
+02.11.17 13:44:59 connection->getInstance() 
+02.11.17 13:47:30 connection->getInstance() 
+02.11.17 13:51:15 connection->getInstance() 
+02.11.17 13:51:52 connection->getInstance() 
+02.11.17 13:53:45 connection->getInstance() 
+02.11.17 14:05:24 connection->getInstance() 
+02.11.17 14:05:28 adminModel->check() 
+02.11.17 14:06:21 adminModel->check() 
+02.11.17 14:13:18 adminModel->check() 
+02.11.17 14:13:27 adminModel->check() 
+02.12.17 00:10:09 adminModel->check() 
+02.12.17 00:10:13 adminModel->check() 
+02.12.17 00:10:17 adminModel->check() 
+references.php->-1
+references.php->0
+references.php->1
+references.php->2
+references.php->3
+references.php->-1
+references.php->0
+references.php->-1
+references.php->0
+references.php->1
+references.php->2
+references.php->3
+references.php->-1
+references.php->0
+references.php->-1
+references.php->0
+references.php->1
+references.php->2
+references.php->3
+references.php->-1
+references.php->0
+references.php->-1
+references.php->0
+references.php->1
+references.php->2
+references.php->3
+references.php->-1
+references.php->0
+references.php->-1
+references.php->0
+references.php->1
+references.php->2
+references.php->3
+references.php->-1
+references.php->0
+references.php->-1
+references.php->0
+references.php->1
+references.php->2
+references.php->3
+references.php->-1
+references.php->0
+references.php->-1
+references.php->0
+references.php->1
+references.php->2
+references.php->3
+references.php->-1
+references.php->0
+references.php->-1
+references.php->0
+references.php->1
+references.php->2
+references.php->3
+references.php->-1
+references.php->0
+references.php->-1
+references.php->0
+references.php->1
+references.php->2
+references.php->3
+references.php->-1
+references.php->0
+references.php->-1
+references.php->0
+references.php->1
+references.php->2
+references.php->3
+references.php->-1
+references.php->0
+references.php->-1
+references.php->0
+references.php->1
+references.php->2
+references.php->3
+references.php->-1
+references.php->0
+references.php->-1
+references.php->0
+references.php->1
+references.php->2
+references.php->3
